@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent } from "react";
-import { TextField, InputAdornment } from "@mui/material";
-import { Search } from "@mui/icons-material";
+import { TextField, InputAdornment, IconButton } from "@mui/material";
+import { Cancel, Clear, Search } from "@mui/icons-material";
 
 const data = [
   { type: "category", label: "Clean Code" },
@@ -8,7 +8,7 @@ const data = [
   { type: "product", label: "Clean Agile" },
 ];
 
-export default function SimpleSearch() {
+const SearchBox = () => {
   const [inputValue, setInputValue] = useState("");
   const [filteredData, setFilteredData] = useState<
     {
@@ -30,15 +30,20 @@ export default function SimpleSearch() {
 
   return (
     <TextField
+      autoComplete="off"
       type="search"
-      placeholder="Search..."
+      placeholder="Search for books..."
       value={inputValue}
       onChange={handleChange}
       sx={{
-        minWidth: "550px",
+        minWidth: {
+          xs: "100%",
+          lg: "500px",
+        },
         "& .MuiOutlinedInput-root": {
           borderRadius: "30px",
           backgroundColor: "#eee",
+          transition: "all 0.3s ease",
           "& fieldset": {
             border: "none",
             transition: "all 0.3s",
@@ -57,7 +62,22 @@ export default function SimpleSearch() {
             <Search sx={{ color: "gray", ml: 1 }} />
           </InputAdornment>
         ),
+        endAdornment: inputValue && (
+          <IconButton onClick={() => setInputValue("")} disableRipple>
+            <Cancel
+              fontSize="small"
+              sx={{
+                color: "#666",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  color: "#999",
+                },
+              }}
+            />
+          </IconButton>
+        ),
       }}
     />
   );
-}
+};
+export default SearchBox;

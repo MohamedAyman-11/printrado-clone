@@ -25,7 +25,7 @@ const InfoBar = () => {
             <Typography
               variant="body1"
               component="p"
-              sx={{ flexGrow: 1 }}
+              sx={{ flexGrow: 1, fontSize: "15px" }}
               color="text.primary"
             >
               The 1st Technology & Business bookstore in Egypt
@@ -38,7 +38,7 @@ const InfoBar = () => {
                 <Typography
                   variant="body2"
                   component="p"
-                  sx={{ flexGrow: 1 }}
+                  sx={{ flexGrow: 1, fontSize: "13px" }}
                   color="#4f4f4f"
                 >
                   01234567890

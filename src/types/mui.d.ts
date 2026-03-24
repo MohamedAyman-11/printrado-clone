@@ -9,6 +9,9 @@ declare module "@mui/material/styles" {
     customColor?: PaletteOptions["primary"];
     whiteColor?: PaletteOptions["primary"];
   }
-
+    interface BreakpointOverrides {
+    xxl: true; 
+    custom:true
+  }
 
 }
