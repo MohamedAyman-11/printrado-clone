@@ -1,4 +1,3 @@
-import { FavoriteBorderOutlined, ShoppingCart } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -9,17 +8,19 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { HomeData } from "../data/homePageData";
 import { Link } from "react-router-dom";
-import { SOFTWAREDATA } from "../data/softwareData";
+import { FavoriteBorderOutlined, ShoppingCart } from "@mui/icons-material";
+import { useState } from "react";
+import { DataScienceData } from "../data/dataPageData";
 
-const SoftwareProductsList = () => {
+const DataProductsList = () => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 10;
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentItems = SOFTWAREDATA.slice(startIndex, endIndex);
+  const currentItems = DataScienceData.slice(startIndex, endIndex);
   return (
     <Box
       component="section"
@@ -110,6 +111,8 @@ const SoftwareProductsList = () => {
                     component={"img"}
                     src={product.img}
                     alt={product.title}
+                    decoding="async"
+                    loading="lazy"
                     width={"100%"}
                     height={"100%"}
                     sx={{
@@ -190,7 +193,7 @@ const SoftwareProductsList = () => {
                       bgcolor: "primary.main",
                       color: "#fff",
                       overflow: "hidden",
-                      mt: "10px",
+                      mt: "5px",
                       transition: "all 0.3s ease",
                       "&:hover": {
                         bgcolor: "#d8832e",
@@ -244,7 +247,7 @@ const SoftwareProductsList = () => {
           mt={"40px"}
         >
           <Pagination
-            count={Math.ceil(SOFTWAREDATA.length / itemsPerPage)}
+            count={Math.ceil(DataScienceData.length / itemsPerPage)}
             page={page}
             onChange={(event, value) => setPage(value)}
             shape="rounded"
@@ -287,4 +290,5 @@ const SoftwareProductsList = () => {
     </Box>
   );
 };
-export default SoftwareProductsList;
+
+export default DataProductsList;

@@ -8,6 +8,7 @@ import About from "./About";
 import Home from "./Home";
 import Security from "./Security";
 import Software from "./Software";
+import Data from "./Data";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="security" element={<Security />} />
       <Route path="software-engineering" element={<Software />} />
+      <Route path="data-science" element={<Data />} />
       <Route path="about-us" element={<About />} />
     </Route>,
   ),

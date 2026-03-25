@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <Box component={"footer"} bgcolor={"#000"} mb={0} py={"20px"}>
+      <Box component={"footer"} bgcolor={"#000"} mb={0} py={"40px"}>
         <Box className={"container"}>
           <Stack
             sx={{

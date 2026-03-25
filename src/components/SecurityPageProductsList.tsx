@@ -46,7 +46,7 @@ const SecurityProductsList = () => {
                   cursor: "pointer",
                   position: "relative",
                   "&:hover .product-img": {
-                    transform: "scale(1.05)",
+                    transform: "scale(1.04)",
                   },
                 }}
               >
@@ -102,17 +102,18 @@ const SecurityProductsList = () => {
                   to={"/"}
                   sx={{
                     width: "100%",
+                    height: "300px",
                   }}
                 >
                   <Box
                     className="product-img"
                     component={"img"}
                     src={product.img}
+                    alt={product.title}
                     width={"100%"}
                     height={"100%"}
                     sx={{
                       transition: "all 0.3s ease",
-                      objectFit: "cover",
                     }}
                   />
                 </Box>
@@ -155,7 +156,7 @@ const SecurityProductsList = () => {
                           textDecoration: "line-through",
                         }}
                       >
-                        {product.price} EGP
+                        {product.price.toFixed(2)} EGP
                       </Typography>
                     ) : (
                       <Typography
@@ -163,7 +164,7 @@ const SecurityProductsList = () => {
                         color="primary.main"
                         fontWeight={"bold"}
                       >
-                        {product.price} EGP
+                        {product.price.toFixed(2)} EGP
                       </Typography>
                     )}
                     <Typography
@@ -172,9 +173,10 @@ const SecurityProductsList = () => {
                       fontWeight={"bold"}
                     >
                       {product.hasDiscount && product.discountRate
-                        ? product.price -
-                          (product.price * product?.discountRate) / 100 +
-                          " EGP"
+                        ? (
+                            product.price -
+                            (product.price * product?.discountRate) / 100
+                          ).toFixed(2) + " EGP"
                         : null}
                     </Typography>
                   </Stack>
