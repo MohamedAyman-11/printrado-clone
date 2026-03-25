@@ -102,12 +102,6 @@ const SecurityProductsList = () => {
                   to={"/"}
                   sx={{
                     width: "100%",
-                    height: {
-                      xs: "250px",
-                      al: "300px",
-                      xxl: "320px",
-                      overflow: "hidden",
-                    },
                   }}
                 >
                   <Box
