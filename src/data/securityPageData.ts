@@ -1,4 +1,4 @@
-export const CyberBooks = [
+export const SECURITYDATA = [
   {
     title: "Hacking, The Art of Exploitation",
     price: 539,

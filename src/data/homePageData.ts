@@ -1,5 +1,5 @@
-export const HomePageData = [
-    {
+export const HomeData = [
+  {
     title: "How to Win Friends & Influence People",
     price: 400,
     hasDiscount: false,
@@ -17,6 +17,7 @@ export const HomePageData = [
     quantity: 1,
     category: "Technology",
   },
+
   {
     title: "The Web Application Hacker’s Handbook",
     price: 760,
@@ -26,33 +27,7 @@ export const HomePageData = [
     quantity: 1,
     category: "Security",
   },
-  {
-    title: "Microservices Design Patterns in .NET",
-    price: 549,
-    hasDiscount: false,
-    discountRate: null,
-    img: "https://printrado.com/wp-content/uploads/2026/01/Microservices-Design-Patterns-in-.NET_-768x948.jpeg",
-    quantity: 1,
-    category: "Software Engineering",
-  },
-  {
-    title: "Think Like a Programmer",
-    price: 440,
-    hasDiscount: true,
-    discountRate: 52,
-    img: "https://printrado.com/wp-content/uploads/2021/02/Think-Like-a-Programmer.jpg",
-    quantity: 1,
-    category: "Software Engineering",
-  },
-  {
-    title: "Head First Java",
-    price: 589,
-    hasDiscount: true,
-    discountRate: 40,
-    img: "https://printrado.com/wp-content/uploads/2022/07/Head-First-Java-768x888.jpg",
-    quantity: 1,
-    category: "Technology",
-  },
+
   {
     title: "High Performance MySQL",
     price: 489,
@@ -62,14 +37,32 @@ export const HomePageData = [
     quantity: 1,
     category: "Technology",
   },
-    {
+  {
     title: "Cybersecurity ABCs",
     price: 560,
     hasDiscount: true,
     discountRate: 39,
     img: "https://printrado.com/wp-content/uploads/2021/12/Cybersecurity-ABCs-205x275.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
+  },
+  {
+    title: "React Clean Code",
+    price: 560,
+    hasDiscount: true,
+    discountRate: 43,
+    img: "https://printrado.com/wp-content/uploads/2022/10/React-Clean-Code-205x275.jpg",
+    quantity: 1,
+    category: "Software Engineering",
+  },
+  {
+    title: "Managing Technical Debt",
+    price: 460,
+    hasDiscount: true,
+    discountRate: 36,
+    img: "https://printrado.com/wp-content/uploads/2024/02/Managing-Technical-Debt-205x275.jpg",
+    quantity: 1,
+    category: "Software Engineering",
   },
   {
     title: "Practical Vulnerability Management",
@@ -78,7 +71,7 @@ export const HomePageData = [
     discountRate: 41,
     img: "https://printrado.com/wp-content/uploads/2021/10/Practical-Vulnerability-Management-205x275.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "A Complete Guide to Burp Suite",
@@ -87,7 +80,7 @@ export const HomePageData = [
     discountRate: 47,
     img: "https://printrado.com/wp-content/uploads/2021/10/Big-Breaches-205x275.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Concise Guide To Databases",
@@ -115,6 +108,33 @@ export const HomePageData = [
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Lean-Product-Playbook.jpg",
     quantity: 1,
     category: "Management",
+  },
+  {
+    title: "Microservices Design Patterns in .NET",
+    price: 549,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2026/01/Microservices-Design-Patterns-in-.NET_-768x948.jpeg",
+    quantity: 1,
+    category: "Software Engineering",
+  },
+  {
+    title: "Think Like a Programmer",
+    price: 440,
+    hasDiscount: true,
+    discountRate: 52,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Think-Like-a-Programmer.jpg",
+    quantity: 1,
+    category: "Software Engineering",
+  },
+  {
+    title: "Head First Java",
+    price: 589,
+    hasDiscount: true,
+    discountRate: 40,
+    img: "https://printrado.com/wp-content/uploads/2022/07/Head-First-Java-768x888.jpg",
+    quantity: 1,
+    category: "Technology",
   },
   {
     title: "Designing Distributed Systems",
@@ -152,14 +172,14 @@ export const HomePageData = [
     quantity: 1,
     category: "Self-Help",
   },
-    {
+  {
     title: "Security Operations in Practice",
     price: 439,
     hasDiscount: false,
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/12/Security-Operations-in-Practice-718x1030.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "SQL for Data Analysis",
@@ -193,7 +213,7 @@ export const HomePageData = [
     price: 499,
     hasDiscount: false,
     discountRate: null,
-    img: "https://printrado.com/wp-content/uploads/2021/02/JavaScript-The-Definitive-Guide-768x1008.jpg",
+    img: "https://printrado.com/wp-content/uploads/2021/02/Refactoring-UI-scaled-768x988.jpg",
     quantity: 1,
     category: "Technology",
   },
@@ -207,6 +227,64 @@ export const HomePageData = [
     category: "Software Engineering",
   },
   {
+    title: "Learning Domain-Driven Design",
+    price: 460,
+    discount: true,
+    discountRate: 32,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Learning-Domain-Driven-Design-768x1007.jpg",
+    category: "Software Engineering",
+  },
+  {
+    title: "Software Architecture, The Hard Parts",
+    price: 569,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Software-Architecture-The-Hard-Parts-768x1007.jpg",
+    quantity: 1,
+  },
+
+
+  {
+    title: "NoSQL Distilled",
+    price: 569,
+    discount: true,
+    discountRate: 56,
+    img: "https://printrado.com/wp-content/uploads/2022/03/NoSQL-Distilled-724x1030.jpg",
+    quantity: 1,
+  },
+  {
+    title: "Grokking Simplicity",
+    price: 563,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/04/Grokking-Simplicity.jpg",
+    quantity: 1,
+  },
+  {
+    title: "Building Event-Driven Microservices",
+    price: 339,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2025/09/Building-Event-Driven-Microservices-768x1008.jpg",
+    quantity: 1,
+  },
+  {
+    title: "Understanding Distributed Systems",
+    price: 559,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/03/Understanding-Distributed-Systems.png",
+    quantity: 1,
+  },
+  {
+    title: "Ace the Data Science Interview",
+    price: 459,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/04/Ace-the-Data-Science-Interview.png",
+    quantity: 1,
+  },
+  {
     title: "Clean Code",
     price: 699,
     hasDiscount: true,
@@ -214,6 +292,23 @@ export const HomePageData = [
     img: "https://printrado.com/wp-content/uploads/2025/11/Clean-Code-350x440.jpg",
     quantity: 1,
     category: "Software Engineering",
+  },
+  {
+    title: "Microservices Patterns",
+    price: 589,
+    discount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Microservices-Patterns-205x275.png",
+    quantity: 1,
+  },
+
+  {
+    title: "The Algorithm Design Manual",
+    price: 619,
+    discount: true,
+    discountRate: 48,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Algorithm-Design-Manual-768x1010.jpg",
+    quantity: 1,
   },
   {
     title: "Designing Data-Intensive Applications",
@@ -368,14 +463,14 @@ export const HomePageData = [
     img: "https://printrado.com/wp-content/uploads/2021/02/Surrounded-by-Idiots-678x1030.jpg",
     quantity: 1,
     category: "Self-Help",
-  },  {
+  }, {
     title: "Hacking, The Art of Exploitation",
     price: 539,
     hasDiscount: true,
     discountRate: 35,
     img: "https://printrado.com/wp-content/uploads/2021/02/Hacking-The-Art-of-Exploitation-768x998.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 
   {
@@ -385,7 +480,7 @@ export const HomePageData = [
     discountRate: 26,
     img: "https://printrado.com/wp-content/uploads/2023/09/Black-Hat-Python-768x1015.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 
   {
@@ -395,7 +490,7 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2025/06/Linux-Basics-for-Hackers-768x1015.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 
   {
@@ -405,7 +500,7 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/10/Bug-Bounty-Bootcamp-768x1014.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 
   {
@@ -415,7 +510,7 @@ export const HomePageData = [
     discountRate: 47,
     img: "https://printrado.com/wp-content/uploads/2021/02/Real-World-Bug-Hunting-768x1015.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 
   {
@@ -425,7 +520,7 @@ export const HomePageData = [
     discountRate: 53,
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Web-Application-Hackers-Handbook.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Social Engineering, The Science of Human",
@@ -434,7 +529,7 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Social-Engineering-The-Science-of-Human-Hacking.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Penetration Testing, A Hands-On Introduction to Hacking",
@@ -443,7 +538,7 @@ export const HomePageData = [
     discountRate: 35,
     img: "https://printrado.com/wp-content/uploads/2021/02/Penetration-Testing-A-Hands-On-Introduction-to-Hacking-768x1015.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Network Basics for Hackers",
@@ -452,9 +547,9 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2023/08/Network-Basics-for-Hackers-768x994.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
-    {
+  {
     title: "C++ How to Program",
     price: 839,
     hasDiscount: true,
@@ -506,7 +601,7 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2022/04/Hacking-APIs.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Getting Started Becoming a Master",
@@ -515,7 +610,7 @@ export const HomePageData = [
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2022/09/Getting-Started-Becoming-a-Master-Hacker-768x994.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Practical Malware Analysis",
@@ -524,7 +619,7 @@ export const HomePageData = [
     discountRate: 30,
     img: "https://printrado.com/wp-content/uploads/2021/02/Practical-Malware-Analysis.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "Writing Secure Code",
@@ -533,7 +628,7 @@ export const HomePageData = [
     discountRate: 50,
     img: "https://printrado.com/wp-content/uploads/2021/02/Writing-Secure-Code.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
   {
     title: "The Hacker Playbook 3",
@@ -542,6 +637,6 @@ export const HomePageData = [
     discountRate: 40,
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Hacker-Playbook-3.jpg",
     quantity: 1,
-    category:"Security"
+    category: "Security"
   },
 ];

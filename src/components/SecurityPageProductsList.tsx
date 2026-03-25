@@ -8,18 +8,18 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { HomePageData } from "../data/homePageData";
 import { Link } from "react-router-dom";
-import { FavoriteBorderOutlined } from "@mui/icons-material";
+import { FavoriteBorderOutlined, ShoppingCart } from "@mui/icons-material";
 import { useState } from "react";
+import { SECURITYDATA } from "../data/securityPageData";
 
-const ProductList = () => {
+const SecurityProductsList = () => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 10;
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentItems = HomePageData.slice(startIndex, endIndex);
+  const currentItems = SECURITYDATA.slice(startIndex, endIndex);
   return (
     <Box
       component="section"
@@ -142,7 +142,6 @@ const ProductList = () => {
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
                     }}
                   >
                     {product.title}
@@ -187,22 +186,54 @@ const ProductList = () => {
                   </Stack>
                   <Button
                     sx={{
+                      position: "relative",
                       width: "100%",
+                      height: "40px",
+                      borderRadius: "90px",
                       bgcolor: "primary.main",
                       color: "#fff",
-                      borderRadius: "90px",
-                      mb: 0,
-                      py: "10px",
+                      overflow: "hidden",
                       mt: "10px",
-                      fontSize: "12px",
-                      fontWeight: 700,
                       transition: "all 0.3s ease",
                       "&:hover": {
                         bgcolor: "#d8832e",
                       },
+
+                      "&:hover .text": {
+                        transform: "translateY(-100%)",
+                        opacity: 0,
+                      },
+
+                      "&:hover .icon": {
+                        transform: "translateY(0)",
+                        opacity: 1,
+                      },
                     }}
                   >
-                    Add to cart
+                    {/* Text */}
+                    <Typography
+                      className="text"
+                      sx={{
+                        position: "absolute",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                        transition: "all 0.3s ease",
+                      }}
+                    >
+                      Add to cart
+                    </Typography>
+
+                    {/* Icon */}
+                    <ShoppingCart
+                      className="icon"
+                      sx={{
+                        position: "absolute",
+                        fontSize: "20px",
+                        transform: "translateY(100%)",
+                        opacity: 0,
+                        transition: "all 0.3s ease",
+                      }}
+                    />
                   </Button>
                 </Box>
               </Box>
@@ -216,7 +247,7 @@ const ProductList = () => {
           mt={"40px"}
         >
           <Pagination
-            count={Math.ceil(HomePageData.length / itemsPerPage)}
+            count={Math.ceil(SECURITYDATA.length / itemsPerPage)}
             page={page}
             onChange={(event, value) => setPage(value)}
             shape="rounded"
@@ -240,7 +271,7 @@ const ProductList = () => {
                 display: "none",
               },
               "& .Mui-disabled": {
-                opacity: "0",
+                display: "none",
               },
             })}
             renderItem={(item) => (
@@ -260,4 +291,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default SecurityProductsList;
