@@ -154,7 +154,6 @@ const Footer = () => {
                 sx={{
                   fontWeight: 500,
                   color: "primary.main",
-                  cursor: "pointer",
                   "&:hover": { textDecoration: "none" },
                 }}
               >

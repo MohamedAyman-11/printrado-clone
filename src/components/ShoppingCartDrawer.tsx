@@ -52,6 +52,7 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
             sx: {
               width: "360px",
               py: "20px",
+              zIndex: (theme) => theme.zIndex.modal,
             },
           },
         }}
