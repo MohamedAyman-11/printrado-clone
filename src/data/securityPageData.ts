@@ -107,7 +107,7 @@ export const CyberBooks = [
     title: "Practical Malware Analysis",
     price: 709,
     hasDiscount: false,
-    discountRate: 30,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Practical-Malware-Analysis.jpg",
     quantity: 1,
     category:"Security"
@@ -116,7 +116,7 @@ export const CyberBooks = [
     title: "Writing Secure Code",
     price: 709,
     hasDiscount: false,
-    discountRate: 50,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Writing-Secure-Code.jpg",
     quantity: 1,
     category:"Security"
@@ -125,8 +125,44 @@ export const CyberBooks = [
     title: "The Hacker Playbook 3",
     price: 509,
     hasDiscount: false,
-    discountRate: 40,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Hacker-Playbook-3.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "Security Operations in Practice",
+    price: 439,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/12/Security-Operations-in-Practice-718x1030.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "Cybersecurity ABCs",
+    price: 560,
+    hasDiscount: true,
+    discountRate: 39,
+    img: "https://printrado.com/wp-content/uploads/2021/12/Cybersecurity-ABCs-205x275.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "Practical Vulnerability Management",
+    price: 379,
+    hasDiscount: true,
+    discountRate: 41,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Practical-Vulnerability-Management-205x275.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "A Complete Guide to Burp Suite",
+    price: 430,
+    hasDiscount: true,
+    discountRate: 47,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Big-Breaches-205x275.jpg",
     quantity: 1,
     category:"Security"
   },

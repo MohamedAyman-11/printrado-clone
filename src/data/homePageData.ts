@@ -62,6 +62,33 @@ export const HomePageData = [
     quantity: 1,
     category: "Technology",
   },
+    {
+    title: "Cybersecurity ABCs",
+    price: 560,
+    hasDiscount: true,
+    discountRate: 39,
+    img: "https://printrado.com/wp-content/uploads/2021/12/Cybersecurity-ABCs-205x275.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "Practical Vulnerability Management",
+    price: 379,
+    hasDiscount: true,
+    discountRate: 41,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Practical-Vulnerability-Management-205x275.jpg",
+    quantity: 1,
+    category:"Security"
+  },
+  {
+    title: "A Complete Guide to Burp Suite",
+    price: 430,
+    hasDiscount: true,
+    discountRate: 47,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Big-Breaches-205x275.jpg",
+    quantity: 1,
+    category:"Security"
+  },
   {
     title: "Concise Guide To Databases",
     price: 699,
@@ -124,6 +151,15 @@ export const HomePageData = [
     img: "https://printrado.com/wp-content/uploads/2021/08/The-Psychology-of-Money-666x1030.jpg",
     quantity: 1,
     category: "Self-Help",
+  },
+    {
+    title: "Security Operations in Practice",
+    price: 439,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/12/Security-Operations-in-Practice-718x1030.jpg",
+    quantity: 1,
+    category:"Security"
   },
   {
     title: "SQL for Data Analysis",

@@ -181,7 +181,7 @@ const ProductList = () => {
                       {product.hasDiscount && product.discountRate
                         ? product.price -
                           (product.price * product?.discountRate) / 100 +
-                          "EGP"
+                          " EGP"
                         : null}
                     </Typography>
                   </Stack>
