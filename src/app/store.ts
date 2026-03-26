@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import wishListSlice from "./features/wishList/wishListSlice"
 import cartSlice from "./features/cart/cartSlice"
 import { persistReducer, persistStore } from 'redux-persist'
-// import storage from 'redux-persist/lib/storage'
+
 const storage = {
  getItem: (key: string) => Promise.resolve(localStorage.getItem(key)),
  setItem: (key: string, value: string) => {
