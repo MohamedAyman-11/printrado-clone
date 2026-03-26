@@ -27,8 +27,9 @@ const DataProductsList = () => {
       sx={{
         mt: "3px",
         py: 12,
-        backgroundImage: "url(./images/background.webp)",
-        backgroundColor: "#777",
+        backgroundImage: "url(/images/background.webp)",
+        // backgroundColor: "#fff",
+        minHeight: "40vh",
       }}
     >
       <Box className="container">
@@ -44,7 +45,7 @@ const DataProductsList = () => {
                   background: "#fff",
                   boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
                   overflow: "hidden",
-                  cursor: "pointer",
+
                   position: "relative",
                   "&:hover .product-img": {
                     transform: "scale(1.04)",
@@ -100,7 +101,7 @@ const DataProductsList = () => {
                 {/* IMAGE */}
                 <Box
                   component={Link}
-                  to={"/"}
+                  to={`/product/${product.slug}`}
                   sx={{
                     width: "100%",
                     height: "300px",
@@ -133,14 +134,21 @@ const DataProductsList = () => {
                 >
                   {/* Title */}
                   <Typography
+                    component={Link}
+                    to={`/product/${product.slug}`}
                     sx={{
+                      mt: "2px",
                       fontWeight: 700,
+                      textDecoration: "none",
                       color: "#333",
                       fontSize: "15px",
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        color: "#777",
+                      },
                     }}
                   >
                     {product.title}

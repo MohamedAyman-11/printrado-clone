@@ -7,8 +7,7 @@ const About = () => {
         component={"section"}
         sx={{
           minHeight: "50vh",
-          backgroundImage: "url( /images/background.webp)",
-          backgroundColor: "#777",
+          backgroundImage: "url(/images/background.webp)",
           mt: "3px",
         }}
       >

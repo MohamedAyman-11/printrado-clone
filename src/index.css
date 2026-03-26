@@ -53,3 +53,84 @@ input[type="search"]::-webkit-search-cancel-button {
  -moz-appearance: none;
  -webkit-appearance: none;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+ display: none;
+ appearance: none;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+}
+
+.break-crumb-link {
+ text-decoration: none;
+ transition: all 0.3s ease;
+ color: #767676;
+ font-size: 15px;
+}
+
+.break-crumb-link:hover {
+ color: #555
+}
+
+.qty-inp {
+ width: 30px;
+ height: 42px;
+ border: 1px solid #0000001a;
+ border-right: none;
+ border-left: none;
+ outline: none;
+ padding: 0;
+ color: #777;
+ font-size: 13px;
+ background-color: #fff;
+ text-align: center;
+}
+
+.qty-btn {
+ border: none;
+ width: 25px;
+ font-size: 16px;
+ color: rgb(119, 119, 119);
+ padding: 0 5px;
+ cursor: pointer;
+ height: 42px;
+ display: inline-block;
+ transition: all 0.5s ease;
+ border: 1px solid #0000001a;
+ background-color: #fff;
+ text-align: center;
+ font-weight: bold;
+
+}
+
+
+.qty-btn:first-child {
+ border-start-start-radius: 35px;
+ border-end-start-radius: 35px;
+}
+
+.qty-btn:last-child {
+ border-start-end-radius: 35px;
+ border-end-end-radius: 35px;
+
+}
+
+
+
+.qty-btn:hover {
+ background-color: #ed9c4b;
+ color: white;
+}
+
+.qty-btn:disabled {
+ cursor: not-allowed;
+ background-color: #2121212e;
+ color: #fff;
+}
+
+.qty-btn:disabled:hover {
+ cursor: not-allowed;
+ background-color: #2121212e;
+ color: #fff;
+}

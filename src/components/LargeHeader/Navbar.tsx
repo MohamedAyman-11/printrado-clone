@@ -42,7 +42,7 @@ const Navbar = () => {
                     slotProps={{
                       primary: {
                         fontSize: "14px",
-                        fontWeight: 500,
+                        fontWeight: 600,
                       },
                     }}
                   />

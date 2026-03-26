@@ -9,6 +9,7 @@ import Home from "./Home";
 import Security from "./Security";
 import Software from "./Software";
 import Data from "./Data";
+import ProductDetailsCard from "../components/ProductDetailsCard";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,8 @@ export const router = createBrowserRouter(
       <Route path="software-engineering" element={<Software />} />
       <Route path="data-science" element={<Data />} />
       <Route path="about-us" element={<About />} />
+      {/* Products Details Page */}
+      <Route path="/product/:slug" element={<ProductDetailsCard />} />
     </Route>,
   ),
 );

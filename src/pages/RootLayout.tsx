@@ -5,6 +5,7 @@ import Navbar from "../components/LargeHeader/Navbar";
 import MobileInfoBar from "../components/MobileHeader/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const RootLayout = () => {
   return (
@@ -34,6 +35,7 @@ const RootLayout = () => {
         </Box>
         <Outlet />
         <Footer />
+        <ToastContainer />
       </main>
     </>
   );
