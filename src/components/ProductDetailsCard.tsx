@@ -270,11 +270,12 @@ const ProductDetailsCard = () => {
                     </Button>
                   </Box>
                   {/* Add To Wish List */}
-                  <Button
+                  <Stack
+                    direction={"row"}
+                    alignItems={"center"}
                     onClick={onAddItemToWishList}
-                    disableRipple
-                    variant="text"
                     sx={{
+                      cursor: "pointer",
                       width: "fit-content",
                       color: "#333333",
                       transition: "all 0.3s ease",
@@ -282,6 +283,7 @@ const ProductDetailsCard = () => {
                       bgcolor: "transparent",
                       fontSize: "15px",
                       fontWeight: 600,
+                      userSelect: "none",
                       "&:hover": {
                         bgcolor: "transparent",
                         color: "#767676",
@@ -297,7 +299,7 @@ const ProductDetailsCard = () => {
                   >
                     <IconButton
                       sx={{
-                        mr: "5px",
+                        mr: inWishListProducts ? "5px" : "0px",
                         color: "#333333",
                         transition: "all 0.3s ease",
                       }}
@@ -331,10 +333,12 @@ const ProductDetailsCard = () => {
                         />
                       )}
                     </IconButton>
-                    {inWishListProducts
-                      ? "Remove from wishlist"
-                      : "Add to wishlist"}
-                  </Button>
+                    <Typography>
+                      {inWishListProducts
+                        ? "Remove from wishlist"
+                        : "Add to wishlist"}
+                    </Typography>
+                  </Stack>
                 </Box>
                 <Divider />
               </Box>
