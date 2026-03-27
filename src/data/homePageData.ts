@@ -85,7 +85,7 @@ export const HomeData: IProduct[] = [
     slug: "fluent-python",
     price: 769,
     hasDiscount: false,
-    discountRate: 45,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2022/05/Fluent-Python-768x1009.jpg",
     quantity: 1,
     category: "Technology",
@@ -113,17 +113,7 @@ export const HomeData: IProduct[] = [
     category: "Software Engineering",
     inStock: true
   },
-  {
-    title: "Practical Vulnerability Management",
-    slug: "practical-vulnerability-management",
-    price: 379,
-    hasDiscount: true,
-    discountRate: 41,
-    img: "https://printrado.com/wp-content/uploads/2021/10/Practical-Vulnerability-Management-205x275.jpg",
-    quantity: 1,
-    category: "Security",
-    inStock: false
-  },
+
   {
     title: "A Complete Guide to Burp Suite",
     slug: "a-complete-guide-to-burp-suite",
@@ -146,28 +136,7 @@ export const HomeData: IProduct[] = [
     category: "Technology",
     inStock: true
   },
-  {
-    title: "The Making Of A Manager",
-    slug: "the-making-of-a-manager",
-    price: 389,
-    hasDiscount: false,
-    discountRate: null,
-    img: "https://printrado.com/wp-content/uploads/2021/02/The-Making-Of-A-Manager-682x1030.jpg",
-    quantity: 1,
-    category: "Management",
-    inStock: true
-  },
-  {
-    title: "The Lean Product Playbook",
-    slug: "the-lean-product-playbook-1",
-    price: 539,
-    hasDiscount: false,
-    discountRate: null,
-    img: "https://printrado.com/wp-content/uploads/2021/02/The-Lean-Product-Playbook.jpg",
-    quantity: 1,
-    category: "Management",
-    inStock: true
-  },
+
   {
     title: "Microservices Design Patterns in .NET",
     slug: "microservices-design-patterns-in-net",
@@ -380,6 +349,120 @@ export const HomeData: IProduct[] = [
     inStock: true
   },
   {
+    title: "Start with Why",
+    slug: "start-with-why",
+    price: 449,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Start-with-Why-684x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "The Lean Product Playbook",
+    slug: "the-lean-product-playbook",
+    price: 435,
+    hasDiscount: true,
+    discountRate: 35,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Lean-Product-Playbook-690x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Become an Effective Software Engineering",
+    slug: "become-an-effective-software-engineering",
+    price: 565,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/03/Become-an-Effective-Software-Engineering-Manager-768x922.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Practical Vulnerability Management",
+    slug: "practical-vulnerability-management",
+    price: 379,
+    hasDiscount: true,
+    discountRate: 41,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Practical-Vulnerability-Management-205x275.jpg",
+    quantity: 1,
+    category: "Security",
+    inStock: false
+  },
+  {
+    title: "The Making Of A Manager",
+    slug: "the-making-of-a-manager",
+    price: 389,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Making-Of-A-Manager-682x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Measure What Matters",
+    slug: "measure-what-matters",
+    price: 469,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Measure-What-Matters-682x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+
+  {
+    title: "Harvard Business Review Manager’s Handbook ",
+    slug: "harvard-business-review-manager’s-handbook ",
+    price: 499,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Harvard-Business-Review-Managers-Handbook.png",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+
+  {
+    title: "Management",
+    slug: "management",
+    price: 669,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/09/Management.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+
+  {
+    title: "The Mythical Man Month",
+    slug: "the-mythical-man-month",
+    price: 489,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2025/06/The-Mythical-Man-Month-685x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+
+  {
+    title: "The Five Dysfunctions of a Team",
+    slug: "the-five-dysfunctions-of-a-team",
+    price: 439,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Five-Dysfunctions-of-a-Team.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
     title: "Understanding Distributed Systems",
     slug: "understanding-distributed-systems",
     price: 559,
@@ -493,7 +576,7 @@ export const HomeData: IProduct[] = [
   {
     title: "Atomic Habits",
     slug: "atomic-habits",
-    price: 829,
+    price: 496,
     hasDiscount: true,
     discountRate: 49,
     img: "https://printrado.com/wp-content/uploads/2021/02/Atomic-Habits-350x440.jpg",
@@ -517,7 +600,7 @@ export const HomeData: IProduct[] = [
     slug: "the-48-laws-of-power",
     price: 579,
     hasDiscount: false,
-    discountRate: 38,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/The-48-Laws-of-Power-736x1030.jpg",
     quantity: 1,
     category: "Self-Help",
@@ -534,17 +617,7 @@ export const HomeData: IProduct[] = [
     category: "Data Science",
     inStock: true
   },
-  {
-    title: "The Lean Product Playbook",
-    slug: "the-lean-product-playbook",
-    price: 435,
-    hasDiscount: true,
-    discountRate: 35,
-    img: "https://printrado.com/wp-content/uploads/2021/02/The-Lean-Product-Playbook-690x1030.jpg",
-    quantity: 1,
-    category: "Management",
-    inStock: true
-  },
+
   {
     title: "The Hundred-Page Machine Learning Book",
     slug: "the-hundred-page-machine-learning-book",
@@ -554,6 +627,204 @@ export const HomeData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Hundred-Page-Machine-Learning-Book.png",
     quantity: 1,
     category: "Data Science",
+    inStock: true
+  },
+  {
+    title: "Managing Humans",
+    slug: "managing-humans",
+    price: 519,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/01/Managing-Humans.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Turn the Ship Around! A True Story of Turning",
+    slug: "turn-the-ship-around-a-true-story-of-turning",
+    price: 479,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/08/Turn-the-Ship-Around-A-True-Story-of-Turning-Followers-into-Leaders.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "The Culture Map",
+    slug: "the-culture-map",
+    price: 479,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Culture-Map-687x1030.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Radical Candor",
+    slug: "radical-candor",
+    price: 479,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Radical-Candor.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: false
+  },
+  {
+    title: "An Elegant Puzzle, Systems of Engineering",
+    slug: "an-elegant-puzzle-systems-of-engineering",
+    price: 459,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/06/An-Elegant-Puzzle-Systems-of-Engineering-Management.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Rich Dad, Poor Dad",
+    slug: "rich-dad-poor-dad",
+    price: 489,
+    hasDiscount: true,
+    discountRate: 51,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Rich-Dad-Poor-Dad-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "The Let Them Theory",
+    slug: "the-let-them-theory",
+    price: 489,
+    hasDiscount: true,
+    discountRate: 51,
+    img: "https://printrado.com/wp-content/uploads/2025/02/The-Let-Them-Theory-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Influence, New and Expanded, The Psychology of Persuasion",
+    slug: "influence-new-and-expanded-the-psychology-of-persuasion",
+    price: 589,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/06/Influence-New-and-Expanded-The-Psychology-of-Persuasion-679x1030.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Never Split the Difference",
+    slug: "never-split-the-difference",
+    price: 589,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Never-Split-the-Difference-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "The 7 Habits of Highly Effective People",
+    slug: "the-7-habits-of-highly-effective-people",
+    price: 589,
+    hasDiscount: true,
+    discountRate: 48,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-7-Habits-of-Highly-Effective-People-scaled-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Deep Work",
+    slug: "deep-work",
+    price: 449,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Deep-Work-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Think and Grow Rich",
+    slug: "think-and-grow-rich",
+    price: 489,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Think-and-Grow-Rich-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Sprint",
+    slug: "sprint",
+    price: 459,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Sprint-scaled-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Good to Great",
+    slug: "good-to-great",
+    price: 449,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Good-to-Great-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Building a Second Brain",
+    slug: "building-a-second-brain",
+    price: 449,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/10/Building-a-Second-Brain-205x275.jpg",
+    inStock: true,
+    category: "Self-Help",
+    quantity: 1
+  },
+  {
+    title: "Team Topologies",
+    slug: "team-topologies",
+    price: 429,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Team-Topologies-scaled.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "The First-Time Manager",
+    slug: "the-first-time-manager",
+    price: 479,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2022/04/The-First-Time-Manager-205x275.jpg",
+    quantity: 1,
+    category: "Management",
+    inStock: true
+  },
+  {
+    title: "Managing the Unmanageable",
+    slug: "managing-the-unmanageable",
+    price: 359,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Managing-the-Unmanageable.jpg",
+    quantity: 1,
+    category: "Management",
     inStock: true
   },
   {
@@ -590,22 +861,12 @@ export const HomeData: IProduct[] = [
     category: "Technology",
     inStock: true
   },
-  {
-    title: "Become an Effective Software Engineering",
-    slug: "become-an-effective-software-engineering",
-    price: 565,
-    hasDiscount: false,
-    discountRate: null,
-    img: "https://printrado.com/wp-content/uploads/2021/03/Become-an-Effective-Software-Engineering-Manager-768x922.jpg",
-    quantity: 1,
-    category: "Management",
-    inStock: true
-  },
+
 
   {
     title: "Surrounded by Idiots",
     slug: "surrounded-by-idiots",
-    price: 459,
+    price: 479,
     hasDiscount: false,
     discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Surrounded-by-Idiots-678x1030.jpg",
@@ -959,7 +1220,7 @@ export const HomeData: IProduct[] = [
     slug: "practical-malware-analysis",
     price: 709,
     hasDiscount: false,
-    discountRate: 30,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Practical-Malware-Analysis.jpg",
     quantity: 1,
     category: "Security",
@@ -970,7 +1231,7 @@ export const HomeData: IProduct[] = [
     slug: "writing-secure-code",
     price: 709,
     hasDiscount: false,
-    discountRate: 50,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/Writing-Secure-Code.jpg",
     quantity: 1,
     category: "Security",
@@ -981,7 +1242,7 @@ export const HomeData: IProduct[] = [
     slug: "the-hacker-playbook-3",
     price: 509,
     hasDiscount: false,
-    discountRate: 40,
+    discountRate: null,
     img: "https://printrado.com/wp-content/uploads/2021/02/The-Hacker-Playbook-3.jpg",
     quantity: 1,
     category: "Security",

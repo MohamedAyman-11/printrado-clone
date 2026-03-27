@@ -37,7 +37,13 @@ const FavBadge = styled(Badge)`
   }
 `;
 const ProductDetailsCard = () => {
+  /* ** States ** */
+  const [inputValue, setInputValue] = useState("1");
+  /* ** Hooks ** */
   const { pathname } = useLocation();
+  const dispatch = useAppDispatch();
+  const params = useParams();
+  const theme = useTheme();
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -45,24 +51,27 @@ const ProductDetailsCard = () => {
       behavior: "smooth",
     });
   }, [pathname]);
-  const theme = useTheme();
+  /* ** Checks ** */
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   const isSmall = useMediaQuery(theme.breakpoints.down("lg"));
+  /* ** Get Data From Store ** */
   const wishListProducts = useAppSelector(
     (state) => state.wishList.wishListProducts,
   );
   const cartProducts = useAppSelector((state) => state.cart.cartProducts);
-  const dispatch = useAppDispatch();
-  const [inputValue, setInputValue] = useState("1");
-  const params = useParams();
   const selectedProductSlug = params.slug;
   const selectedProduct = HomeData.filter(
     (product) => product.slug.toLocaleLowerCase() === selectedProductSlug,
   )[0];
+  /* ** Checks ** */
   const inCart = cartProducts.find(
     (item) => item.slug === selectedProduct.slug,
   );
+  const inWishListProducts = wishListProducts.find(
+    (item) => item.slug === selectedProduct.slug,
+  );
 
+  /* ** Handlers ** */
   const onAddItemToCart = () => {
     dispatch(
       addItemToCart({
@@ -74,9 +83,6 @@ const ProductDetailsCard = () => {
   const onAddItemToWishList = () => {
     dispatch(addItemToWishList(selectedProduct));
   };
-  const inWishListProducts = wishListProducts.find(
-    (item) => item.slug === selectedProduct.slug,
-  );
 
   return (
     <>

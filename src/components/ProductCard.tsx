@@ -33,15 +33,18 @@ const FavBadge = styled(Badge)`
 `;
 const ProductCard = ({ product }: IProps) => {
   const dispatch = useAppDispatch();
+  /* ** Get Data From Store ** */
   const cartProducts = useAppSelector((state) => state.cart.cartProducts);
   const wishListProducts = useAppSelector(
     (state) => state.wishList.wishListProducts,
   );
+  /* ** Checks ** */
   const inCart = cartProducts.find((item) => item.slug === product.slug);
 
   const inWishList = wishListProducts.find(
     (item) => item.slug === product.slug,
   );
+  /* ** Handlers ** */
   const onAddItemToCart = () => {
     dispatch(addItemToCart(product));
   };
