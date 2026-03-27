@@ -10,14 +10,16 @@ import Security from "./Security";
 import Software from "./Software";
 import Data from "./Data";
 import ProductDetailsCard from "../components/ProductDetailsCard";
+import Technology from "./Technology";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="security" element={<Security />} />
       <Route path="software-engineering" element={<Software />} />
       <Route path="data-science" element={<Data />} />
+      <Route path="technology" element={<Technology />} />
+      <Route path="security" element={<Security />} />
       <Route path="about-us" element={<About />} />
       {/* Products Details Page */}
       <Route path="/product/:slug" element={<ProductDetailsCard />} />

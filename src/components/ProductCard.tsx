@@ -173,7 +173,7 @@ const ProductCard = ({ product }: IProps) => {
                     textDecoration: "line-through",
                   }}
                 >
-                  {product.price.toFixed(2)} EGP
+                  {Math.trunc(product.price)} EGP
                 </Typography>
               ) : (
                 <Typography
@@ -181,7 +181,7 @@ const ProductCard = ({ product }: IProps) => {
                   color="primary.main"
                   fontWeight={"bold"}
                 >
-                  {product.price.toFixed(2)} EGP
+                  {Math.trunc(product.price)} EGP
                 </Typography>
               )}
               <Typography
@@ -190,10 +190,10 @@ const ProductCard = ({ product }: IProps) => {
                 fontWeight={"bold"}
               >
                 {product.hasDiscount && product.discountRate
-                  ? (
+                  ? Math.trunc(
                       product.price -
-                      (product.price * product?.discountRate) / 100
-                    ).toFixed(2) + " EGP"
+                        (product.price * product?.discountRate) / 100,
+                    ) + " EGP"
                   : null}
               </Typography>
             </Stack>

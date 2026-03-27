@@ -4,13 +4,13 @@ export const DataScienceData: IProduct[] = [
   {
     title: "Hands-On Machine Learning with Scikit-Learn and PyTorch",
     slug: "hands-on-machine-learning-with-scikit-learn-and-pytorch",
-    price: 679,
+    price: 829,
     hasDiscount: true,
-    discountRate: 44,
-    img: "https://printrado.com/wp-content/uploads/2025/11/Hands-On-Machine-Learning-with-Scikit-Learn-and-PyTorch-768x1008.jpg",
+    discountRate: 46,
+    img: "https://printrado.com/wp-content/uploads/2025/11/Hands-On-Machine-Learning-with-Scikit-Learn-and-PyTorch-350x440.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: true,
+    inStock: true
   },
 
   {
@@ -114,7 +114,7 @@ export const DataScienceData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2021/11/Grokking-Machine-Learning.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: true,
+    inStock: true
   },
   {
     title: "Python for Data Analysis",
@@ -125,18 +125,18 @@ export const DataScienceData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2022/10/Python-for-Data-Analysis-205x275.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: true,
+    inStock: true
   },
   {
     title: "Deep Learning Cookbook",
     slug: "deep-learning-cookbook",
     price: 500,
     hasDiscount: true,
-    discountRate: 34,
+    discountRate: 43,
     img: "https://printrado.com/wp-content/uploads/2021/02/Deep-Learning-Cookbook-scaled.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: false,
+    inStock: true
   },
   {
     title: "Kafka, The Definitive Guide",
@@ -147,7 +147,7 @@ export const DataScienceData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2022/03/Kafka-The-Definitive-Guide-205x275.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: true,
+    inStock: true
   },
   {
     title: "Calculus, Early Transcendentals",
@@ -158,6 +158,6 @@ export const DataScienceData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2021/02/Calculus-Early-Transcendentals-205x275.jpg",
     quantity: 1,
     category: "Data Science",
-    inStock: false,
+    inStock: true
   },
 ];

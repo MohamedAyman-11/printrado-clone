@@ -13,6 +13,28 @@ export const HomeData: IProduct[] = [
     inStock: true
   },
   {
+    title: "C++ How to Program",
+    slug: "c++-how-to-program",
+    price: 839,
+    hasDiscount: true,
+    discountRate: 26,
+    img: "https://printrado.com/wp-content/uploads/2025/07/C-How-to-Program.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true
+  },
+  {
+    title: "Automate the Boring Stuff with Python Workbook",
+    slug: "automate-the-boring-stuff-with-python-workbook",
+    price: 496,
+    hasDiscount: false,
+    discountRate: null,
+    img: "https://printrado.com/wp-content/uploads/2026/01/Automate-the-Boring-Stuff-with-Python-Workbook-205x275.jpeg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
+  },
+  {
     title: "The Design of Everyday Things",
     slug: "the-design-of-everyday-things",
     price: 350,
@@ -37,6 +59,17 @@ export const HomeData: IProduct[] = [
     inStock: true
   },
   {
+    title: "Learning React, Modern Patterns for Developing",
+    slug: "learning-react-modern-patterns-for-developing",
+    price: 329,
+    hasDiscount: true,
+    discountRate: 49,
+    img: "https://printrado.com/wp-content/uploads/2021/02/Learning-React-Modern-Patterns-for-Developing-React-Apps.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
+  },
+  {
     title: "Cybersecurity ABCs",
     slug: "cybersecurity-abcs",
     price: 560,
@@ -46,6 +79,17 @@ export const HomeData: IProduct[] = [
     quantity: 1,
     category: "Security",
     inStock: true
+  },
+  {
+    title: "Fluent Python",
+    slug: "fluent-python",
+    price: 769,
+    hasDiscount: false,
+    discountRate: 45,
+    img: "https://printrado.com/wp-content/uploads/2022/05/Fluent-Python-768x1009.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
   },
   {
     title: "React Clean Code",
@@ -167,6 +211,17 @@ export const HomeData: IProduct[] = [
     quantity: 1,
     category: "Software Engineering",
     inStock: true
+  },
+  {
+    title: "Head First HTML and CSS",
+    slug: "head-first-html-and-css",
+    price: 450,
+    hasDiscount: true,
+    discountRate: 39,
+    img: "https://printrado.com/wp-content/uploads/2022/06/Head-First-HTML-and-CSS-205x275.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
   },
   {
     title: "Effective Java Script",
@@ -650,6 +705,29 @@ export const HomeData: IProduct[] = [
     inStock: true
   },
   {
+    title: "The C Programming Language ",
+    slug: "the-c-programming-language ",
+    price: 459,
+    hasDiscount: true,
+    discountRate: 61,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-C-Programming-Language-205x275.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
+  },
+
+  {
+    title: "Node.js Design Patterns",
+    slug: "nodejs-design-patterns",
+    price: 739,
+    hasDiscount: true,
+    discountRate: 61,
+    img: "https://printrado.com/wp-content/uploads/2025/10/Node.js-Design-Patterns-768x948.jpeg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
+  },
+  {
     title: "Essential Math for Data Science",
     slug: "essential-math-for-data-science",
     price: 349,
@@ -703,6 +781,29 @@ export const HomeData: IProduct[] = [
     quantity: 1,
     category: "Data Science",
     inStock: true
+  },
+  {
+    title: "You Don’t Know JS",
+    slug: "you-don't-know-js",
+    price: 269,
+    hasDiscount: true,
+    discountRate: 30,
+    img: "https://printrado.com/wp-content/uploads/2021/02/You-Dont-Know-JS-205x275.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
+  },
+
+  {
+    title: "Python Crash Course ",
+    slug: "python-crash-course ",
+    price: 469,
+    hasDiscount: true,
+    discountRate: 31,
+    img: "https://printrado.com/wp-content/uploads/2022/10/Python-Crash-Course-205x275.jpg",
+    quantity: 1,
+    category: "Technology",
+    inStock: true,
   },
 
   {
@@ -784,17 +885,6 @@ export const HomeData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2023/08/Network-Basics-for-Hackers-768x994.jpg",
     quantity: 1,
     category: "Security",
-    inStock: true
-  },
-  {
-    title: "C++ How to Program",
-    slug: "c-how-to-program",
-    price: 839,
-    hasDiscount: true,
-    discountRate: 26,
-    img: "https://printrado.com/wp-content/uploads/2025/07/C-How-to-Program.jpg",
-    quantity: 1,
-    category: "Technology",
     inStock: true
   },
   {

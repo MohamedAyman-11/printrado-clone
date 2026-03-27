@@ -54,7 +54,6 @@ const ProductDetailsCard = () => {
   const inWishListProducts = wishListProducts.find(
     (item) => item.slug === selectedProduct.slug,
   );
-  console.log(inWishListProducts);
 
   return (
     <>
@@ -115,7 +114,7 @@ const ProductDetailsCard = () => {
                         textDecoration: "line-through",
                       }}
                     >
-                      {selectedProduct.price.toFixed(2)} EGP
+                      {Math.trunc(selectedProduct.price)} EGP
                     </Typography>
                   ) : (
                     <Typography
@@ -123,7 +122,7 @@ const ProductDetailsCard = () => {
                       color="primary.main"
                       fontWeight={"bold"}
                     >
-                      {selectedProduct.price.toFixed(2)} EGP
+                      {Math.trunc(selectedProduct.price)} EGP
                     </Typography>
                   )}
                   <Typography
@@ -132,12 +131,12 @@ const ProductDetailsCard = () => {
                     fontWeight={"bold"}
                   >
                     {selectedProduct.hasDiscount && selectedProduct.discountRate
-                      ? (
+                      ? Math.trunc(
                           selectedProduct.price -
-                          (selectedProduct.price *
-                            selectedProduct?.discountRate) /
-                            100
-                        ).toFixed(2) + " EGP"
+                            (selectedProduct.price *
+                              selectedProduct?.discountRate) /
+                              100,
+                        ) + " EGP"
                       : null}
                   </Typography>
                 </Stack>

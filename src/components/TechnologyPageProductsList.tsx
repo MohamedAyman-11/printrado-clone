@@ -1,16 +1,16 @@
 import { Box, Grid } from "@mui/material";
 import { useState } from "react";
-import { DataScienceData } from "../data/dataPageData";
 import ProductCard from "./ProductCard";
 import CustomPagination from "./CustomPagination";
+import { TECHNOLOGYDATA } from "../data/technologyPageData";
 
-const DataProductsList = () => {
+const TechnologyProductsList = () => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 10;
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentItems = DataScienceData.slice(startIndex, endIndex);
+  const currentItems = TECHNOLOGYDATA.slice(startIndex, endIndex);
   return (
     <Box
       component="section"
@@ -28,7 +28,7 @@ const DataProductsList = () => {
           ))}
         </Grid>
         <CustomPagination
-          count={Math.ceil(DataScienceData.length / itemsPerPage)}
+          count={Math.ceil(TECHNOLOGYDATA.length / itemsPerPage)}
           page={page}
           setPage={setPage}
         />
@@ -37,4 +37,4 @@ const DataProductsList = () => {
   );
 };
 
-export default DataProductsList;
+export default TechnologyProductsList;
