@@ -129,8 +129,85 @@ input[type="number"]::-webkit-outer-spin-button {
  color: #fff;
 }
 
+/* .add-to-cart-btn:disabled {
+ cursor: not-allowed;
+} */
+
 .qty-btn:disabled:hover {
  cursor: not-allowed;
  background-color: #2121212e;
  color: #fff;
+}
+
+.soc {
+ color: #777;
+ transition: all 0.3s ease;
+ padding: 0;
+ cursor: pointer;
+}
+
+.soc:hover {
+ color: #333;
+}
+
+
+
+.MuiTabs-indicator {
+ top: 0px !important;
+ height: 3px !important;
+
+}
+
+.MuiTabs-list button.MuiButtonBase-root {
+ padding-top: 25px;
+ transition: all 0.3s ease;
+ color: #333333b3;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+
+.MuiTabs-list button.MuiButtonBase-root:hover {
+ color: #333;
+}
+
+.MuiTabs-list button.MuiButtonBase-root.Mui-selected {
+ color: #333;
+}
+
+.MuiAccordionDetails-root {
+ border: none !important;
+ padding: 0 !important;
+}
+
+.accordion-header .MuiAccordionSummary-content {
+ margin: 0 !important;
+}
+
+.accordion-header .MuiAccordionSummary-content .MuiTypography-root {
+ font-size: 16px;
+ font-weight: 600;
+ color: #333;
+ transition: all 0.3s ease;
+}
+
+.accordion-header .MuiAccordionSummary-content .MuiTypography-root:hover {
+ color: #ed9c4b;
+}
+
+.accordion-header .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+ color: #ed9c4b;
+}
+
+
+.swiper-wrapper {
+ margin: 20px 0px 50px;
+}
+
+.swiper-pagination-bullet {
+ width: 13px !important;
+ height: 13px !important;
+}
+
+.swiper-pagination-bullet-active {
+ background-color: #ed9c4b !important;
 }

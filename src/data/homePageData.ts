@@ -10,7 +10,7 @@ export const HomeData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2021/02/How-to-Win-Friends-Influence-People-663x1030.jpg",
     quantity: 1,
     category: "Self-Help",
-    inStock: true
+    inStock: false
   },
   {
     title: "C++ How to Program",
@@ -32,7 +32,7 @@ export const HomeData: IProduct[] = [
     img: "https://printrado.com/wp-content/uploads/2026/01/Automate-the-Boring-Stuff-with-Python-Workbook-205x275.jpeg",
     quantity: 1,
     category: "Technology",
-    inStock: true,
+    inStock: false,
   },
   {
     title: "The Design of Everyday Things",
@@ -624,6 +624,17 @@ export const HomeData: IProduct[] = [
     inStock: false
   },
   {
+    title: "Gray Hat C#",
+    slug: "gray-hat-csharp",
+    price: 539,
+    hasDiscount: true,
+    discountRate: 35,
+    img: "https://printrado.com/wp-content/uploads/2021/10/Gray-Hat-C-205x275.jpg",
+    quantity: 1,
+    category: "Security",
+    inStock: false
+  },
+  {
     title: "Practical Statistics for Data Scientists",
     slug: "practical-statistics-for-data-scientists",
     price: 490,
@@ -909,17 +920,7 @@ export const HomeData: IProduct[] = [
     category: "Self-Help",
     inStock: true
   },
-  {
-    title: "The Web Application Hacker's Handbook",
-    slug: "the-web-application-hackers-handbook",
-    price: 849,
-    hasDiscount: true,
-    discountRate: 53,
-    img: "https://printrado.com/wp-content/uploads/2021/02/The-Web-Application-Hackers-Handbook.jpg",
-    quantity: 1,
-    category: "Security",
-    inStock: true
-  },
+
   {
     title: "Real-World Bug Hunting",
     slug: "real-world-bug-hunting",

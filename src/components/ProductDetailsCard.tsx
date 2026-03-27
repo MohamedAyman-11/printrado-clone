@@ -8,19 +8,27 @@ import {
   Stack,
   styled,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import BreadCrumb from "./BreadCrumb";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { HomeData } from "../data/homePageData";
 import {
+  BlockOutlined,
   Check,
   FavoriteBorderOutlined,
   ShoppingCart,
 } from "@mui/icons-material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addItemToCart } from "../app/features/cart/cartSlice";
 import { addItemToWishList } from "../app/features/wishList/wishListSlice";
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import CustomTabs from "./Tabs";
+import ProductDetailsAccordion from "./ProductDetailsAccordion";
+import RelatedProducts from "./RelatedProducts";
 
 const FavBadge = styled(Badge)`
   & .${badgeClasses.badge} {
@@ -29,9 +37,21 @@ const FavBadge = styled(Badge)`
   }
 `;
 const ProductDetailsCard = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("lg"));
   const wishListProducts = useAppSelector(
     (state) => state.wishList.wishListProducts,
   );
+  const cartProducts = useAppSelector((state) => state.cart.cartProducts);
   const dispatch = useAppDispatch();
   const [inputValue, setInputValue] = useState("1");
   const params = useParams();
@@ -39,6 +59,9 @@ const ProductDetailsCard = () => {
   const selectedProduct = HomeData.filter(
     (product) => product.slug.toLocaleLowerCase() === selectedProductSlug,
   )[0];
+  const inCart = cartProducts.find(
+    (item) => item.slug === selectedProduct.slug,
+  );
 
   const onAddItemToCart = () => {
     dispatch(
@@ -74,15 +97,32 @@ const ProductDetailsCard = () => {
           />
           <Box py={"30px"}>
             {/* Info */}
-            <Stack direction={"row"} alignItems={"flex-start"} gap={"40px"}>
+            <Stack
+              sx={{
+                flexDirection: {
+                  xs: "column",
+                  md: "row",
+                },
+              }}
+              alignItems={"flex-start"}
+              gap={"40px"}
+            >
               {/* Product Image */}
               <Box
                 component={"img"}
                 src={selectedProduct.img}
                 sx={{
-                  width: "392px",
-                  height: "518",
+                  maxWidth: "392px",
+                  height: "518px",
                   borderRadius: "10px",
+                  width: {
+                    xs: "90%",
+                    sm: "100%",
+                    md: "50%",
+                  },
+                  mx: {
+                    xs: "auto",
+                  },
                 }}
               />
               <Box flex={1}>
@@ -91,9 +131,16 @@ const ProductDetailsCard = () => {
                   variant="h1"
                   color="#333333"
                   sx={{
-                    fontSize: "34px",
+                    fontSize: {
+                      xs: "21px",
+                      md: "34px",
+                    },
                     lineHeight: "1.2",
                     fontWeight: 700,
+                    textAlign: {
+                      xs: "center",
+                      md: "start",
+                    },
                   }}
                 >
                   {selectedProduct.title}
@@ -104,31 +151,50 @@ const ProductDetailsCard = () => {
                   direction={"row"}
                   alignItems={"center"}
                   gap={"10px"}
+                  sx={{
+                    justifyContent: {
+                      xs: "center",
+                      md: "start",
+                    },
+                  }}
                 >
                   {selectedProduct.hasDiscount &&
                   selectedProduct.discountRate ? (
                     <Typography
-                      fontSize={"25px"}
                       color="#BBBBBB"
                       sx={{
                         textDecoration: "line-through",
+                        fontSize: {
+                          xs: "17px",
+                          md: "25px",
+                        },
                       }}
                     >
                       {Math.trunc(selectedProduct.price)} EGP
                     </Typography>
                   ) : (
                     <Typography
-                      fontSize={"29px"}
                       color="primary.main"
                       fontWeight={"bold"}
+                      sx={{
+                        fontSize: {
+                          xs: "18px",
+                          md: "29px",
+                        },
+                      }}
                     >
                       {Math.trunc(selectedProduct.price)} EGP
                     </Typography>
                   )}
                   <Typography
-                    fontSize={"29px"}
                     color="primary.main"
                     fontWeight={"bold"}
+                    sx={{
+                      fontSize: {
+                        xs: "18px",
+                        md: "29px",
+                      },
+                    }}
                   >
                     {selectedProduct.hasDiscount && selectedProduct.discountRate
                       ? Math.trunc(
@@ -140,6 +206,43 @@ const ProductDetailsCard = () => {
                       : null}
                   </Typography>
                 </Stack>
+                {/* If Exists In Stock */}
+                {selectedProduct.inStock ? (
+                  <Typography
+                    align="center"
+                    mx={"auto"}
+                    variant="body1"
+                    color="initial"
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    mt={"10px"}
+                    gap={"2.5px"}
+                    sx={{ fontWeight: 600, color: "#333" }}
+                  >
+                    <Check sx={{ color: "primary.main", fontSize: "20px" }} />
+                    In stock
+                  </Typography>
+                ) : (
+                  <Typography
+                    align="center"
+                    mx={"auto"}
+                    variant="body1"
+                    display={"flex"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                    mt={"10px"}
+                    gap={"2.5px"}
+                    sx={{ fontWeight: 600, color: "error.light" }}
+                  >
+                    <BlockOutlined
+                      sx={{
+                        fontSize: "20px",
+                      }}
+                    />
+                    Sold Out
+                  </Typography>
+                )}
                 {/* Actions  */}
                 <Box
                   mt={"20px"}
@@ -147,6 +250,7 @@ const ProductDetailsCard = () => {
                   alignItems={"center"}
                   gap={"30px"}
                   pb={"30px"}
+                  flexWrap={"wrap"}
                 >
                   {/* Cart  */}
                   <Box
@@ -154,6 +258,10 @@ const ProductDetailsCard = () => {
                     display={"flex"}
                     alignItems={"center"}
                     gap={"20px"}
+                    flexBasis={{
+                      xs: "100%",
+                      lg: "auto",
+                    }}
                   >
                     {/* Quantity */}
                     <Stack
@@ -202,7 +310,6 @@ const ProductDetailsCard = () => {
                           setInputValue(String(num));
                         }}
                       />
-
                       <input
                         type="button"
                         value={"+"}
@@ -217,11 +324,21 @@ const ProductDetailsCard = () => {
                     </Stack>
                     {/* Add To Cart */}
                     <Button
+                      className="add-to-cart-btn"
+                      disabled={!selectedProduct.inStock}
                       onClick={onAddItemToCart}
                       sx={{
+                        cursor: "pointer",
                         flex: "1 1 auto",
+                        flexGrow: {
+                          xs: "0",
+                          lg: "1",
+                        },
                         position: "relative",
-                        width: "100%",
+                        width: {
+                          xs: "100%",
+                          lg: "100%",
+                        },
                         height: "40px",
                         borderRadius: "90px",
                         bgcolor: "primary.main",
@@ -231,12 +348,16 @@ const ProductDetailsCard = () => {
                         "&:hover": {
                           bgcolor: "#d8832e",
                         },
-
+                        "&:disabled": {
+                          pointerEvents: "auto",
+                          bgcolor: "#999",
+                          color: "#fff",
+                          cursor: "not-allowed",
+                        },
                         "&:hover .text": {
                           transform: "translateY(-100%)",
                           opacity: 0,
                         },
-
                         "&:hover .icon": {
                           transform: "translateY(0)",
                           opacity: 1,
@@ -256,16 +377,29 @@ const ProductDetailsCard = () => {
                         Add to cart
                       </Typography>
                       {/* Icon */}
-                      <ShoppingCart
-                        className="icon"
-                        sx={{
-                          position: "absolute",
-                          fontSize: "20px",
-                          transform: "translateY(100%)",
-                          opacity: 0,
-                          transition: "all 0.3s ease",
-                        }}
-                      />
+                      {inCart ? (
+                        <Check
+                          className="icon"
+                          sx={{
+                            position: "absolute",
+                            fontSize: "20px",
+                            transform: "translateY(100%)",
+                            opacity: 0,
+                            transition: "all 0.3s ease",
+                          }}
+                        />
+                      ) : (
+                        <ShoppingCart
+                          className="icon"
+                          sx={{
+                            position: "absolute",
+                            fontSize: "20px",
+                            transform: "translateY(100%)",
+                            opacity: 0,
+                            transition: "all 0.3s ease",
+                          }}
+                        />
+                      )}
                     </Button>
                   </Box>
                   {/* Add To Wish List */}
@@ -283,6 +417,10 @@ const ProductDetailsCard = () => {
                       fontSize: "15px",
                       fontWeight: 600,
                       userSelect: "none",
+                      mx: {
+                        xs: "auto",
+                        md: 0,
+                      },
                       "&:hover": {
                         bgcolor: "transparent",
                         color: "#767676",
@@ -332,7 +470,7 @@ const ProductDetailsCard = () => {
                         />
                       )}
                     </IconButton>
-                    <Typography>
+                    <Typography fontWeight={600}>
                       {inWishListProducts
                         ? "Remove from wishlist"
                         : "Add to wishlist"}
@@ -340,9 +478,75 @@ const ProductDetailsCard = () => {
                   </Stack>
                 </Box>
                 <Divider />
+                {/* Accordion And Tabs  */}
+                <Box
+                  pt={"30px"}
+                  pb={"10px"}
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                  sx={{
+                    flexDirection: {
+                      xs: "column",
+                      lg: "row",
+                    },
+                    gap: "25px",
+                  }}
+                >
+                  <Typography
+                    display={"flex"}
+                    alignItems={"center"}
+                    variant="body1"
+                    component={"span"}
+                    sx={{
+                      color: "#333",
+                      fontWeight: 600,
+                      fontSize: "15px",
+                      lineHeight: 0,
+                    }}
+                  >
+                    Category:
+                    <Typography
+                      ml={"3px"}
+                      sx={{
+                        color: "#777",
+                        fontSize: "15px",
+                        lineHeight: 0,
+                      }}
+                    >
+                      {selectedProduct.category}
+                    </Typography>
+                  </Typography>
+                  <Box display={"flex"} alignItems={"center"}>
+                    <Typography
+                      display={"flex"}
+                      alignItems={"center"}
+                      variant="body1"
+                      component={"p"}
+                      sx={{
+                        color: "#333",
+                        fontWeight: 600,
+                        fontSize: "16px",
+                        mr: "3px",
+                        lineHeight: 0,
+                      }}
+                    >
+                      Share:
+                    </Typography>
+                    <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+                      <FaFacebookF className="soc" size={15} />
+                      <FaXTwitter className="soc" size={15} />
+                      <FaLinkedinIn className="soc" size={15} />
+                      <FaWhatsapp className="soc" size={15} />
+                    </Box>
+                  </Box>
+                </Box>
+                {isLarge && <CustomTabs />}
+                {isSmall && <ProductDetailsAccordion />}
               </Box>
             </Stack>
           </Box>
+          <RelatedProducts product={selectedProduct} />
         </Box>
       </Box>
     </>

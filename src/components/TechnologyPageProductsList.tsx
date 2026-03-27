@@ -27,7 +27,9 @@ const TechnologyProductsList = () => {
       <Box className="container">
         <Grid container spacing={2}>
           {currentItems.map((product) => (
-            <ProductCard key={product.slug} product={product} />
+            <Grid size={{ xs: 6, md: 4, lg: 3, xl: 2.4 }} key={product.slug}>
+              <ProductCard product={product} />
+            </Grid>
           ))}
         </Grid>
         <CustomPagination
