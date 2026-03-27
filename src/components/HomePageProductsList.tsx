@@ -16,7 +16,7 @@ const HomeProductsList = () => {
       component="section"
       sx={{
         mt: "3px",
-        py: 12,
+        py: 8,
         backgroundImage: "url(/images/background.webp)",
         backgroundColor: "#fff",
       }}

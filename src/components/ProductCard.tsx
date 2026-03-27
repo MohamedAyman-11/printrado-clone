@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import type { IProduct } from "../interfaces";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAppDispatch } from "../app/store";
 import { addItemToCart } from "../app/features/cart/cartSlice";
 interface IProps {

@@ -910,6 +910,17 @@ export const HomeData: IProduct[] = [
     inStock: true
   },
   {
+    title: "The Web Application Hacker's Handbook",
+    slug: "the-web-application-hackers-handbook",
+    price: 849,
+    hasDiscount: true,
+    discountRate: 53,
+    img: "https://printrado.com/wp-content/uploads/2021/02/The-Web-Application-Hackers-Handbook.jpg",
+    quantity: 1,
+    category: "Security",
+    inStock: true
+  },
+  {
     title: "Real-World Bug Hunting",
     slug: "real-world-bug-hunting",
     price: 499,
