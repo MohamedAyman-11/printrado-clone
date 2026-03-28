@@ -1,8 +1,8 @@
 import { Box, Grid } from "@mui/material";
 import { useState } from "react";
-import ProductCard from "./ProductCard";
-import CustomPagination from "./CustomPagination";
 import { HomeData } from "../data/homePageData";
+import CustomPagination from "./ProductDetails/CustomPagination";
+import ProductCard from "./ProductCard";
 
 const SelfHelpProductsList = () => {
   const [page, setPage] = useState(1);

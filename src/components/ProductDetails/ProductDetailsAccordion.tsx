@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -10,6 +9,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
+import { memo, useState, type SyntheticEvent } from "react";
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -48,11 +48,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function ProductDetailsAccordion() {
-  const [expanded, setExpanded] = React.useState<string | false>("panel1");
+const ProductDetailsAccordion = () => {
+  const [expanded, setExpanded] = useState<string | false>("panel1");
 
   const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+    (panel: string) => (event: SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
 
@@ -174,4 +174,5 @@ export default function ProductDetailsAccordion() {
       </Accordion>
     </div>
   );
-}
+};
+export default memo(ProductDetailsAccordion);

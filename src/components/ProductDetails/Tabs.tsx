@@ -1,8 +1,8 @@
-import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { memo, useState } from "react";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -33,8 +33,8 @@ function a11yProps(index: number) {
   };
 }
 
-export default function CustomTabs() {
-  const [value, setValue] = React.useState(0);
+const CustomTabs = () => {
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -94,4 +94,5 @@ export default function CustomTabs() {
       </CustomTabPanel>
     </Box>
   );
-}
+};
+export default memo(CustomTabs);

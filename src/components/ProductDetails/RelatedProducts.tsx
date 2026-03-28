@@ -1,17 +1,15 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { HomeData } from "../data/homePageData";
-import ProductCard from "./ProductCard";
-import type { IProduct } from "../interfaces";
+import { HomeData } from "../../data/homePageData";
+import type { IProduct } from "../../interfaces";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
+import { memo } from "react";
+import ProductCard from "../ProductCard";
 
 interface IProps {
   product: IProduct;
@@ -137,4 +135,4 @@ const RelatedProducts = ({ product }: IProps) => {
     </>
   );
 };
-export default RelatedProducts;
+export default memo(RelatedProducts);

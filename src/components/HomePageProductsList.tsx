@@ -1,8 +1,8 @@
-import { Box, Grid, PaginationItem } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { HomeData } from "../data/homePageData";
 import { useState } from "react";
+import CustomPagination from "./ProductDetails/CustomPagination";
 import ProductCard from "./ProductCard";
-import CustomPagination from "./CustomPagination";
 
 const HomeProductsList = () => {
   const [page, setPage] = useState(1);

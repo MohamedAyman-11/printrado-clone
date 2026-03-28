@@ -1,48 +1,47 @@
-import { Clear } from "@mui/icons-material";
+import { Clear, ProductionQuantityLimits } from "@mui/icons-material";
 import {
+  Box,
   Button,
   Divider,
   Drawer,
-  Icon,
-  IconButton,
+  List,
+  ListItem,
   Stack,
   Typography,
 } from "@mui/material";
+import { useAppSelector } from "../app/hooks";
+import { NavLink } from "react-router-dom";
+import type { IProduct } from "../interfaces";
+import { Fragment } from "react/jsx-runtime";
+import DrawerProductCard from "./DrawerProductCard";
 
 interface IProps {
   open: boolean;
   toggleDrawer: (value: boolean) => () => void;
 }
 const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
-  // const DrawerList = (
-  //   <Box sx={{ width: 300 }} role="presentation" onClick={toggleDrawer(false)}>
-  //     <List>
-  //       {NAVBARDATA.map((item: INAVBARDATA) => (
-  //         <Fragment key={item.id}>
-  //           <ListItem disablePadding>
-  //             <ListItemButton
-  //               disableRipple
-  //               component={NavLink}
-  //               to={item.path}
-  //               sx={{
-  //                 fontSize: "14px",
-  //                 background: "transparent",
-  //                 transition: "all 0.3s ease",
-  //                 "&:hover": {
-  //                   backgroundColor: "transparent",
-  //                   color: "primary.main",
-  //                 },
-  //               }}
-  //             >
-  //               <ListItemText primary={item.title} />
-  //             </ListItemButton>
-  //           </ListItem>
-  //           <Divider />
-  //         </Fragment>
-  //       ))}
-  //     </List>
-  //   </Box>
-  // );
+  /* Get Cart Products Form Store */
+  const cartProductsList = useAppSelector((state) => state.cart.cartProducts);
+  const DrawerList = (
+    <Box
+      sx={{ width: "100%" }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
+      <List>
+        {cartProductsList.map((product: IProduct) => (
+          <Fragment key={product.slug}>
+            <DrawerProductCard product={product} />
+            <Divider
+              sx={{
+                my: "10px",
+              }}
+            />
+          </Fragment>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <div>
@@ -102,6 +101,45 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
           </Button>
         </Stack>
         <Divider />
+        <Box>
+          {cartProductsList.length ? (
+            DrawerList
+          ) : (
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"center"}
+              py={"35px"}
+            >
+              <ProductionQuantityLimits
+                sx={{
+                  fontSize: "85px",
+                  mx: "auto",
+                  mb: "20px",
+                  textAlign: "center",
+                  color: "#00000012",
+                  display: "block",
+                }}
+              />
+              <Typography
+                variant="body1"
+                color="#242424"
+                fontWeight={700}
+                mb={"20px"}
+              >
+                No products in the cart.
+              </Typography>
+              <NavLink
+                className={"go-to-shop"}
+                onClick={toggleDrawer(false)}
+                to={"/"}
+                style={{}}
+              >
+                Return To Shop
+              </NavLink>
+            </Box>
+          )}
+        </Box>
         {/* {DrawerList} */}
       </Drawer>
     </div>

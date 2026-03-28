@@ -2,6 +2,7 @@
  padding: 0;
  margin: 0;
  box-sizing: border-box;
+ font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 /* ** Global Styles ** */
@@ -212,4 +213,23 @@ a.active {
 
 .swiper-pagination-bullet-active {
  background-color: #ed9c4b !important;
+}
+
+/* ** Shopping Drawer ** */
+.go-to-shop {
+ color: #fff !important;
+ background-color: #ed9c4b;
+ text-decoration: none;
+ border-radius: 35px;
+ padding: 12px 20px;
+ font-size: 13px;
+ font-weight: 600;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.3s ease;
+}
+
+.go-to-shop:hover {
+ background-color: #c17b35;
 }

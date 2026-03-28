@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import CustomPagination from "./CustomPagination";
+import CustomPagination from "./ProductDetails/CustomPagination";
 import { HomeData } from "../data/homePageData";
 
 const SecurityProductsList = () => {

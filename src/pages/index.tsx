@@ -9,7 +9,7 @@ import Home from "./Home";
 import Security from "./Security";
 import Software from "./Software";
 import Data from "./Data";
-import ProductDetailsCard from "../components/ProductDetailsCard";
+import ProductDetailsCard from "../components/ProductDetails/ProductDetailsCard";
 import Technology from "./Technology";
 import Management from "./Management";
 import SelfHelp from "./SelfHelp";

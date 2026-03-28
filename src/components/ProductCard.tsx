@@ -16,11 +16,11 @@ import {
   Typography,
 } from "@mui/material";
 import type { IProduct } from "../interfaces";
-import { Link } from "react-router-dom";
 import { useAppDispatch } from "../app/store";
-import { addItemToCart } from "../app/features/cart/cartSlice";
 import { useAppSelector } from "../app/hooks";
+import { addItemToCart } from "../app/features/cart/cartSlice";
 import { addItemToWishList } from "../app/features/wishList/wishListSlice";
+import { Link } from "react-router-dom";
 interface IProps {
   product: IProduct;
 }
@@ -116,7 +116,6 @@ const ProductCard = ({ product }: IProps) => {
               Sold Out
             </Typography>
           )}
-
           {inWishList ? (
             <Tooltip
               title="Remove from wishlist"

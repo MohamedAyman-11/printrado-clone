@@ -2,10 +2,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 
 import { Stack } from "@mui/material";
-import UserIcons from "../UserIcons";
 import SearchBox from "../SearchBox";
 import { useState } from "react";
 import ShoppingCartDrawer from "../ShoppingCartDrawer";
+import UserIcons from "../UserIcons";
 
 const MainAppBar = () => {
   const [open, setOpen] = useState(false);
