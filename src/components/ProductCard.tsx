@@ -26,8 +26,11 @@ interface IProps {
 }
 const FavBadge = styled(Badge)`
   & .${badgeClasses.badge} {
-    top: 0px;
-    right: 0px;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
     background-color: #ed9c4b;
   }
 `;
@@ -148,10 +151,8 @@ const ProductCard = ({ product }: IProps) => {
                     "& .MuiBadge-badge": {
                       backgroundColor: "primary.main",
                       color: "white",
-                      fontSize: "12px",
+                      fontSize: "10px",
                       fontWeight: "bold",
-                      width: "18px",
-                      height: "18px",
                       borderRadius: "50%",
                     },
                   }}

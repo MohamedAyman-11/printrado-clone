@@ -17,8 +17,10 @@ interface IProps {
 }
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {
-    top: -12px;
+    top: -15px;
     right: -10px;
+    width: 20px;
+    height: 20px;
     background-color: #fff;
     color: #ed9c4b;
     box-shadow: 0 0 2px #999;
@@ -71,7 +73,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
         <Button
           onClick={toggleDrawer(true)}
           sx={{
-            padding: "12px",
+            padding: "12px 16px",
             bgcolor: "#101010",
             color: "white",
             borderRadius: "30px",
@@ -82,6 +84,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
           0 EGP
           <CartBadge
             badgeContent={cartProductsList.length}
+            showZero
             color="primary"
             overlap="circular"
           />
