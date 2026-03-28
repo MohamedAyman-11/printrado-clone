@@ -4,8 +4,8 @@ import MainAppBar from "../components/LargeHeader/MainAppBar";
 import Navbar from "../components/LargeHeader/Navbar";
 import MobileInfoBar from "../components/MobileHeader/Header";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
 import { ToastContainer } from "react-toastify";
+import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (

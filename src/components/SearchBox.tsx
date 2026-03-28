@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent } from "react";
 import { TextField, InputAdornment, IconButton } from "@mui/material";
-import { Cancel, Clear, Search } from "@mui/icons-material";
+import { Cancel, Search } from "@mui/icons-material";
 
 const data = [
   { type: "category", label: "Clean Code" },
