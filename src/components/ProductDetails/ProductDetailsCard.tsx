@@ -1,12 +1,7 @@
 import {
-  Badge,
-  badgeClasses,
   Box,
-  Button,
   Divider,
-  IconButton,
   Stack,
-  styled,
   Typography,
   useMediaQuery,
   useTheme,
@@ -14,12 +9,6 @@ import {
 import BreadCrumb from "../BreadCrumb";
 import { useLocation, useParams } from "react-router-dom";
 import { HomeData } from "../../data/homePageData";
-import {
-  BlockOutlined,
-  Check,
-  FavoriteBorderOutlined,
-  ShoppingCart,
-} from "@mui/icons-material";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addItemToCart } from "../../app/features/cart/cartSlice";

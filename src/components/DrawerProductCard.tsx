@@ -11,11 +11,37 @@ import {
 import type { IProduct } from "../interfaces";
 import { NavLink } from "react-router-dom";
 import { Close } from "@mui/icons-material";
+import { useAppDispatch } from "../app/store";
+import { removeItemFromCart } from "../app/features/cart/cartSlice";
 
 const DrawerProductCard = ({ product }: { product: IProduct }) => {
+  const dispatch = useAppDispatch();
+  const removeProductFromCart = () => {
+    dispatch(removeItemFromCart(product));
+  };
   return (
     <>
-      <ListItem disablePadding>
+      <ListItem
+        disablePadding
+        sx={{
+          border: "1px solid #0000001b",
+          transition: "all 0.3s ease",
+          py: "15px",
+          "&:last-of-type": {
+            borderBottom: "none",
+          },
+
+          "&:first-of-type": {
+            borderTop: "none",
+          },
+          "&:hover .MuiTypography-root.MuiTypography-body1 ": {
+            color: "#777 ",
+          },
+          "&:hover": {
+            backgroundColor: "#0000000a",
+          },
+        }}
+      >
         <ListItemButton
           disableRipple
           component={NavLink}
@@ -24,8 +50,9 @@ const DrawerProductCard = ({ product }: { product: IProduct }) => {
             fontSize: "14px",
             background: "transparent",
             transition: "all 0.3s ease",
-            "&:hover .MuiTypography-root.MuiTypography-body1 ": {
-              color: "#777 ",
+
+            "&:hover": {
+              backgroundColor: "transparent",
             },
           }}
         >
@@ -79,12 +106,7 @@ const DrawerProductCard = ({ product }: { product: IProduct }) => {
                     ml: "5px",
                   }}
                 >
-                  {product.hasDiscount && product.discountRate
-                    ? Math.trunc(
-                        product.price -
-                          (product?.discountRate / 100) * product.price,
-                      )
-                    : product.price}
+                  {product.price}
                 </Typography>
               </Stack>
             </ListItemText>
@@ -93,6 +115,7 @@ const DrawerProductCard = ({ product }: { product: IProduct }) => {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                removeProductFromCart();
               }}
               sx={{
                 transition: "all 0.3s ease",

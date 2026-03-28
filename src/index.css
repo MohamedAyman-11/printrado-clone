@@ -233,3 +233,29 @@ a.active {
 .go-to-shop:hover {
  background-color: #c17b35;
 }
+
+/* ** Drawer Footer ** */
+.remaining-price {
+ font-weight: bold;
+ color: #ed9c4b;
+}
+
+.go-to-cart {
+ width: 100%;
+ border-radius: 35px;
+ color: #333;
+ font-weight: 600;
+ background-color: #f3f2f2;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ padding: 12px 20px;
+ display: block;
+ box-shadow: 0 0 1px #2121214c;
+ text-align: center;
+ margin-top: 10px;
+ font-size: 14px;
+}
+
+.go-to-cart:hover {
+ background-color: #e4e4e4;
+}

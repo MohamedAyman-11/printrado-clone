@@ -12,6 +12,7 @@ import {
   styled,
 } from "@mui/material";
 import { useAppSelector } from "../app/hooks";
+import { useMemo } from "react";
 interface IProps {
   toggleDrawer: (value: boolean) => () => void;
 }
@@ -29,6 +30,13 @@ const CartBadge = styled(Badge)`
 const UserIcons = ({ toggleDrawer }: IProps) => {
   /* Get Cart Products Form Store */
   const cartProductsList = useAppSelector((state) => state.cart.cartProducts);
+  const totalPrice = useMemo(() => {
+    return cartProductsList.reduce(
+      (acc, cur) => acc + cur.price * cur.quantity,
+      0,
+    );
+  }, [cartProductsList]);
+
   return (
     <>
       <Stack direction={"row"} alignItems={"center"} gap={"20px"}>
@@ -81,7 +89,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
           }}
           startIcon={<ShoppingCartOutlined />}
         >
-          0 EGP
+          {totalPrice} EGP
           <CartBadge
             badgeContent={cartProductsList.length}
             showZero

@@ -1,19 +1,12 @@
-import { Clear, ProductionQuantityLimits } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { ProductionQuantityLimits } from "@mui/icons-material";
+import { Box, Divider, Drawer, List, Typography } from "@mui/material";
 import { useAppSelector } from "../app/hooks";
 import { NavLink } from "react-router-dom";
 import type { IProduct } from "../interfaces";
 import { Fragment } from "react/jsx-runtime";
 import DrawerProductCard from "./DrawerProductCard";
+import ShoppingCartDrawerFooter from "./ShoppingCartDrawerFooter";
+import ShoppingCartDrawerHeader from "./ShoppingCartDrawerHeader";
 
 interface IProps {
   open: boolean;
@@ -24,19 +17,42 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
   const cartProductsList = useAppSelector((state) => state.cart.cartProducts);
   const DrawerList = (
     <Box
-      sx={{ width: "100%" }}
+      sx={{
+        width: "100%",
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+        minHeight: 0,
+      }}
       role="presentation"
-      onClick={toggleDrawer(false)}
     >
-      <List>
+      <List
+        disablePadding
+        sx={{
+          flexGrow: 1,
+          overflow: "auto",
+          minHeight: 0,
+
+          "&::-webkit-scrollbar": {
+            width: "8px",
+            borderRadius: 0,
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#ccc",
+            borderRadius: "0px",
+            transition: "background-color 0.3s ease",
+          },
+          "&::-webkit-scrollbar-thumb:hover": {
+            backgroundColor: "#999",
+          },
+        }}
+      >
         {cartProductsList.map((product: IProduct) => (
           <Fragment key={product.slug}>
             <DrawerProductCard product={product} />
-            <Divider
-              sx={{
-                my: "10px",
-              }}
-            />
           </Fragment>
         ))}
       </List>
@@ -49,9 +65,12 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
         slotProps={{
           paper: {
             sx: {
-              width: "360px",
+              width: "350px",
               py: "20px",
               zIndex: (theme) => theme.zIndex.modal,
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
             },
           },
         }}
@@ -59,49 +78,17 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
         open={open}
         onClose={toggleDrawer(false)}
       >
-        <Stack
-          pb={"10px"}
-          px={"10px"}
-          direction={"row"}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
-          <Typography
-            variant="h6"
-            component={"h6"}
-            sx={{
-              color: "#242424",
-              fontWeight: "bold",
-            }}
-          >
-            Shopping cart
-          </Typography>
-          <Button
-            onClick={toggleDrawer(false)}
-            disableRipple
-            sx={{
-              color: "#333",
-              transition: "all 0.3s ease",
-              backgroundColor: "transparent",
-              fontSize: "15px",
-              gap: "1px",
-              textTransform: "capitalize",
-              display: "flex",
-              alignItems: "center",
-              "&:hover": {
-                color: "#777",
-              },
-              "& .MuiButton-startIcon": {
-                margin: 0,
-              },
-            }}
-            startIcon={<Clear />}
-          >
-            <Typography fontWeight={700}>Close</Typography>
-          </Button>
-        </Stack>
+        <ShoppingCartDrawerHeader toggleDrawer={toggleDrawer} />
         <Divider />
-        <Box>
+        {/* {DrawerList} */}
+        <Box
+          sx={{
+            flex: 1,
+            minHeight: 0,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           {cartProductsList.length ? (
             DrawerList
           ) : (
@@ -140,7 +127,7 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
             </Box>
           )}
         </Box>
-        {/* {DrawerList} */}
+        <ShoppingCartDrawerFooter />
       </Drawer>
     </div>
   );
