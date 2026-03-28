@@ -3,11 +3,30 @@ import {
   PersonOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import { Button, IconButton, Stack } from "@mui/material";
+import {
+  Badge,
+  badgeClasses,
+  Button,
+  IconButton,
+  Stack,
+  styled,
+} from "@mui/material";
+import { useAppSelector } from "../app/hooks";
 interface IProps {
   toggleDrawer: (value: boolean) => () => void;
 }
+const CartBadge = styled(Badge)`
+  & .${badgeClasses.badge} {
+    top: -12px;
+    right: -10px;
+    background-color: #fff;
+    color: #ed9c4b;
+    box-shadow: 0 0 2px #999;
+  }
+`;
 const UserIcons = ({ toggleDrawer }: IProps) => {
+  /* Get Cart Products Form Store */
+  const cartProductsList = useAppSelector((state) => state.cart.cartProducts);
   return (
     <>
       <Stack direction={"row"} alignItems={"center"} gap={"20px"}>
@@ -61,6 +80,11 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
           startIcon={<ShoppingCartOutlined />}
         >
           0 EGP
+          <CartBadge
+            badgeContent={cartProductsList.length}
+            color="primary"
+            overlap="circular"
+          />
         </Button>
       </Stack>
     </>
