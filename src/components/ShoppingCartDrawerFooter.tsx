@@ -16,9 +16,10 @@ const ShoppingCartDrawerFooter = ({ toggleLShoppingDrawer }: IProps) => {
   }, [cartProductsList]);
   return (
     <>
-      <Box px={"20px"}>
+      <Box>
         <Stack
           py={"15px"}
+          px={"15px"}
           direction={"row"}
           alignItems={"center"}
           justifyContent={"space-between"}
@@ -51,33 +52,35 @@ const ShoppingCartDrawerFooter = ({ toggleLShoppingDrawer }: IProps) => {
         </Stack>
         <OrderProgress />
         {/* ** Button Actions ** */}
-        <Link
-          className="go-to-cart"
-          to={"/cart"}
-          onClick={toggleLShoppingDrawer(false)}
-        >
-          View cart
-        </Link>
-        <Button
-          sx={{
-            width: "100%",
-            color: "#ffff",
-            bgcolor: "primary.main",
-            mt: "10px",
-            borderRadius: "35px",
-            fontWeight: 600,
-            textTransform: "initial",
-            p: "12px 20px",
-            display: "block",
-            lineHeight: "initial",
-            transition: "all 0.3s ease",
-            "&:hover": {
-              bgcolor: "#d8832e",
-            },
-          }}
-        >
-          Checkout
-        </Button>
+        <Stack direction={"column"} px={"15px"}>
+          <Link
+            className="go-to-cart"
+            to={"/cart"}
+            onClick={toggleLShoppingDrawer(false)}
+          >
+            View cart
+          </Link>
+          <Button
+            sx={{
+              width: "100%",
+              color: "#ffff",
+              bgcolor: "primary.main",
+              mt: "10px",
+              borderRadius: "35px",
+              fontWeight: 600,
+              textTransform: "initial",
+              p: "12px 20px",
+              display: "block",
+              lineHeight: "initial",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                bgcolor: "#d8832e",
+              },
+            }}
+          >
+            Checkout
+          </Button>
+        </Stack>
       </Box>
     </>
   );

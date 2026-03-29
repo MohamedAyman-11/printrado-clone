@@ -86,7 +86,12 @@ const DrawerProductCard = ({ product }: { product: IProduct }) => {
               }}
             >
               {product.title}
-              <Stack display={"flex"} direction={"row"} alignItems={"center"}>
+              <Stack
+                display={"flex"}
+                direction={"row"}
+                alignItems={"center"}
+                mt={"5px"}
+              >
                 <Typography
                   variant="body2"
                   sx={{

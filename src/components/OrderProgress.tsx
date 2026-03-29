@@ -14,11 +14,11 @@ const OrderProgress = () => {
   const progress = Math.min((totalPrice / 2000) * 100, 100);
   return (
     <>
-      <Box sx={{ py: "15px" }}>
+      <Box sx={{ py: "15px" }} px={"15px"}>
         <Typography sx={{ mb: 1, color: "#777", fontSize: "15px" }}>
           {remaining ? (
             <Typography component={"span"}>
-              Add <span className="remaining-price">{remaining} EGP</span> EGP
+              Add <span className="remaining-price">{remaining} EGP </span>
               to cart and get free shipping!
             </Typography>
           ) : (
