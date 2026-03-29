@@ -13,6 +13,7 @@ import ProductDetailsCard from "../components/ProductDetails/ProductDetailsCard"
 import Technology from "./Technology";
 import Management from "./Management";
 import SelfHelp from "./SelfHelp";
+import WishList from "./WishList";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ export const router = createBrowserRouter(
       <Route path="management" element={<Management />} />
       <Route path="self-help" element={<SelfHelp />} />
       <Route path="about-us" element={<About />} />
+      <Route path="wishlist" element={<WishList />} />
       {/* Products Details Page */}
       <Route path="/product/:slug" element={<ProductDetailsCard />} />
     </Route>,

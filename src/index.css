@@ -259,3 +259,55 @@ a.active {
 .go-to-cart:hover {
  background-color: #e4e4e4;
 }
+
+/* user icons */
+.large-header-icon {
+ width: 46px;
+ height: 46px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ color: #101010b3;
+ background-color: #1010100d !important;
+ transition: all 0.3s ease;
+ padding: 9px;
+}
+
+.large-header-icon:hover svg {
+ transform: scale(1.1);
+ color: #999;
+
+}
+
+.small-header-icon {
+ width: 46px;
+ height: 46px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+ color: #101010b3;
+ transition: all 0.3s ease;
+ padding: 9px;
+}
+
+.small-header-icon:hover svg {
+ transform: scale(1.1);
+ color: #999;
+}
+
+.wishlist-badge {
+ position: absolute;
+ top: 7px;
+ right: 2px;
+ background-color: #ed9c4b;
+ color: #fff;
+ width: 17px;
+ height: 17px;
+ border-radius: 50%;
+ font-size: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}

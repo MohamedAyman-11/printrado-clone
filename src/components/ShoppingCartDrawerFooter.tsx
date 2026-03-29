@@ -3,8 +3,10 @@ import { useAppSelector } from "../app/hooks";
 import { memo, useMemo } from "react";
 import OrderProgress from "./OrderProgress";
 import { Link } from "react-router-dom";
-
-const ShoppingCartDrawerFooter = () => {
+interface IProps {
+  toggleLShoppingDrawer: (value: boolean) => () => void;
+}
+const ShoppingCartDrawerFooter = ({ toggleLShoppingDrawer }: IProps) => {
   const cartProductsList = useAppSelector((state) => state.cart.cartProducts);
   const totalPrice = useMemo(() => {
     return cartProductsList.reduce(
@@ -49,7 +51,11 @@ const ShoppingCartDrawerFooter = () => {
         </Stack>
         <OrderProgress />
         {/* ** Button Actions ** */}
-        <Link className="go-to-cart" to={"/"}>
+        <Link
+          className="go-to-cart"
+          to={"/cart"}
+          onClick={toggleLShoppingDrawer(false)}
+        >
           View cart
         </Link>
         <Button

@@ -8,7 +8,7 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
    if (isAlreadyExist) {
       toast.success("✔ Product quantity updated", {
          position: "top-center",
-         autoClose: 2500,
+         autoClose: 1500,
          theme: "light",
          transition: Bounce,
       });
@@ -20,7 +20,7 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
 
    toast.success("✔ Product added at cart", {
       position: "top-center",
-      autoClose: 2500,
+      autoClose: 1500,
       theme: "light",
       transition: Bounce,
    });
@@ -41,7 +41,7 @@ export const removeItemFromCartHandler = (cartProducts: IProduct[], product: IPr
 
    toast.success("✔ Product removed successfully", {
       position: "top-center",
-      autoClose: 2500,
+      autoClose: 1500,
       theme: "light",
       transition: Bounce,
 

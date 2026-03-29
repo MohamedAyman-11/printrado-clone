@@ -11,8 +11,9 @@ import {
   Stack,
   styled,
 } from "@mui/material";
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 interface IProps {
   toggleDrawer: (value: boolean) => () => void;
 }
@@ -40,44 +41,22 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
   return (
     <>
       <Stack direction={"row"} alignItems={"center"} gap={"20px"}>
-        <IconButton
-          sx={{
-            width: "46px",
-            height: "46px",
-            bgcolor: "#1010100d",
-            color: "#101010b3",
-            "&:hover svg": {
-              color: "#999",
-              transform: "scale(1.09)",
-            },
-          }}
-        >
+        <Link to={"/wishlist"} className="large-header-icon">
           <FavoriteBorderOutlined
             fontSize="medium"
             sx={{
               transition: "all 0.3s ease",
             }}
           />
-        </IconButton>
-        <IconButton
-          sx={{
-            width: "46px",
-            height: "46px",
-            bgcolor: "#1010100d",
-            color: "#101010b3",
-            "&:hover svg": {
-              color: "#999",
-              transform: "scale(1.09)",
-            },
-          }}
-        >
+        </Link>
+        <Link to={"/cart"} className="large-header-icon">
           <PersonOutlined
             fontSize="medium"
             sx={{
               transition: "all 0.3s ease",
             }}
           />
-        </IconButton>
+        </Link>
         <Button
           onClick={toggleDrawer(true)}
           sx={{

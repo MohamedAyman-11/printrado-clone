@@ -5,7 +5,7 @@ import { Stack } from "@mui/material";
 import SearchBox from "../SearchBox";
 import { useState } from "react";
 import ShoppingCartDrawer from "../ShoppingCartDrawer";
-import UserIcons from "../UserIcons";
+import UserIcons from "./UserIcons";
 
 const MainAppBar = () => {
   const [open, setOpen] = useState(false);

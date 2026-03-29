@@ -1,6 +1,6 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import { IconButton, Stack } from "@mui/material";
+import { Badge, badgeClasses, IconButton, Stack, styled } from "@mui/material";
 import {
   FavoriteBorderOutlined,
   Menu,
@@ -11,6 +11,7 @@ import { useState } from "react";
 import LinksDrawer from "./Drawer";
 import SearchBox from "../SearchBox";
 import ShoppingCartDrawer from "../ShoppingCartDrawer";
+import UserIcons from "./UserIcons";
 
 const MobileInfoBar = () => {
   const [openLinkDrawer, setOpenLinkDrawer] = useState(false);
@@ -75,54 +76,7 @@ const MobileInfoBar = () => {
                   height: "40px",
                 }}
               />
-              <Stack direction={"row"} alignItems={"center"}>
-                <IconButton
-                  disableRipple
-                  sx={{
-                    width: "42px",
-                    height: "42px",
-                    color: "#101010b3",
-                  }}
-                >
-                  <FavoriteBorderOutlined
-                    fontSize="medium"
-                    sx={{
-                      fontSize: "18ppx",
-                    }}
-                  />
-                </IconButton>
-                <IconButton
-                  disableRipple
-                  sx={{
-                    width: "42px",
-                    height: "42px",
-                    color: "#101010b3",
-                  }}
-                >
-                  <PersonOutlined
-                    fontSize="medium"
-                    sx={{
-                      fontSize: "18ppx",
-                    }}
-                  />
-                </IconButton>
-                <IconButton
-                  onClick={toggleLShoppingDrawer(true)}
-                  disableRipple
-                  sx={{
-                    width: "42px",
-                    height: "42px",
-                    color: "#101010b3",
-                  }}
-                >
-                  <ShoppingCartOutlined
-                    fontSize="medium"
-                    sx={{
-                      fontSize: "18ppx",
-                    }}
-                  />
-                </IconButton>
-              </Stack>
+              <UserIcons toggleLShoppingDrawer={toggleLShoppingDrawer} />
             </Stack>
           </Box>
         </AppBar>

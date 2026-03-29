@@ -127,7 +127,7 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
             </Box>
           )}
         </Box>
-        <ShoppingCartDrawerFooter />
+        <ShoppingCartDrawerFooter toggleLShoppingDrawer={toggleDrawer} />
       </Drawer>
     </div>
   );
