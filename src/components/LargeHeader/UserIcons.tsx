@@ -3,14 +3,7 @@ import {
   PersonOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import {
-  Badge,
-  badgeClasses,
-  Button,
-  IconButton,
-  Stack,
-  styled,
-} from "@mui/material";
+import { Badge, badgeClasses, Button, Stack, styled } from "@mui/material";
 import { useAppSelector } from "../../app/hooks";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
@@ -40,7 +33,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
 
   return (
     <>
-      <Stack direction={"row"} alignItems={"center"} gap={"20px"}>
+      <Stack direction={"row"} alignItems={"center"} gap={"10px"}>
         <Link to={"/wishlist"} className="large-header-icon">
           <FavoriteBorderOutlined
             fontSize="medium"
