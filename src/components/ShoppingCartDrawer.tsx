@@ -52,7 +52,10 @@ const ShoppingCartDrawer = ({ open, toggleDrawer }: IProps) => {
       >
         {cartProductsList.map((product: IProduct) => (
           <Fragment key={product.slug}>
-            <DrawerProductCard product={product} />
+            <DrawerProductCard
+              product={product}
+              onClick={toggleDrawer(false)}
+            />
           </Fragment>
         ))}
       </List>

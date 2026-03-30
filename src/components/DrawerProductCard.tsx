@@ -14,7 +14,13 @@ import { Close } from "@mui/icons-material";
 import { useAppDispatch } from "../app/store";
 import { removeItemFromCart } from "../app/features/cart/cartSlice";
 
-const DrawerProductCard = ({ product }: { product: IProduct }) => {
+const DrawerProductCard = ({
+  product,
+  onClick,
+}: {
+  product: IProduct;
+  onClick: () => void;
+}) => {
   const dispatch = useAppDispatch();
   const removeProductFromCart = () => {
     dispatch(removeItemFromCart(product));
@@ -22,6 +28,7 @@ const DrawerProductCard = ({ product }: { product: IProduct }) => {
   return (
     <>
       <ListItem
+        onClick={onClick}
         disablePadding
         sx={{
           border: "1px solid #0000001b",

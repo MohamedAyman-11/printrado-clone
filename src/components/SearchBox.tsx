@@ -1,4 +1,11 @@
-import { memo, useMemo, useState } from "react";
+import {
+  memo,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+} from "react";
 import {
   TextField,
   InputAdornment,
@@ -13,16 +20,53 @@ import SearchResultCard from "./SearchResultCard";
 
 const SearchBox = () => {
   const [inputValue, setInputValue] = useState("");
+  const [open, setOpen] = useState(false);
+  const boxRef = useRef<HTMLDivElement>(null);
+  const inpRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        boxRef.current &&
+        !boxRef.current.contains(event.target as Node) &&
+        inpRef.current &&
+        !inpRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   const fuse = useMemo(() => {
     return new Fuse(HomeData, {
       keys: ["title"],
       threshold: 0.2,
     });
   }, []);
+
   const filteredResults = useMemo(() => {
     return fuse.search(inputValue).map((result) => result.item);
   }, [fuse, inputValue]);
 
+  /* Handlers */
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const inpValue = e.target.value;
+    setInputValue(inpValue);
+    if (inpValue.length >= 3) {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  };
+  const onFocusHandler = () => {
+    if (inputValue.length >= 3) {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  };
   return (
     <Box
       sx={{
@@ -34,11 +78,13 @@ const SearchBox = () => {
       }}
     >
       <TextField
+        inputRef={inpRef}
         autoComplete="off"
         type="search"
         placeholder="Search for books..."
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={onChangeHandler}
+        onFocus={onFocusHandler}
         sx={{
           width: "100%",
           "& .MuiOutlinedInput-root": {
@@ -64,7 +110,12 @@ const SearchBox = () => {
             </InputAdornment>
           ),
           endAdornment: inputValue && (
-            <IconButton onClick={() => setInputValue("")} disableRipple>
+            <IconButton
+              onClick={() => {
+                setInputValue("");
+              }}
+              disableRipple
+            >
               <Cancel
                 fontSize="small"
                 sx={{
@@ -80,8 +131,9 @@ const SearchBox = () => {
         }}
       />
       {/* Render filtered results */}
-      {inputValue.length >= 3 && (
+      {open && inputValue.length >= 3 && (
         <Box
+          ref={boxRef}
           sx={{
             minWidth: {
               xs: "100%",
@@ -119,7 +171,10 @@ const SearchBox = () => {
               <SearchResultCard
                 key={product.slug}
                 product={product}
-                onClick={() => setInputValue("")}
+                onClick={() => {
+                  setInputValue("");
+                  setOpen(false);
+                }}
               />
             ))
           ) : (
