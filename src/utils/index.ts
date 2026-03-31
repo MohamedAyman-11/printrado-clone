@@ -25,7 +25,7 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
       transition: Bounce,
    });
 
-   return [...cartProducts, {
+   return [{
       ...product, quantity: product.quantity || 1, price:
          product.hasDiscount && product.discountRate
             ? Math.trunc(
@@ -33,7 +33,7 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
                (product.discountRate * product.price) / 100,
             )
             : Math.trunc(product.price),
-   }];
+   }, ...cartProducts];
 };
 
 // Add Items To Cart Handler

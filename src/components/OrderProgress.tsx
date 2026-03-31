@@ -30,12 +30,14 @@ const OrderProgress = () => {
           variant="determinate"
           value={progress}
           sx={{
-            height: 8,
+            height: 10,
             borderRadius: 5,
             backgroundColor: "#eee",
             "& .MuiLinearProgress-bar": {
-              background:
-                "repeating-linear-gradient(45deg, #f97316, #f97316 10px, #fb923c 10px, #fb923c 20px)",
+              backgroundImage:
+                "linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent)",
+              backgroundSize: "15px 15px",
+              backgroundColor: "#ed9c4b",
             },
           }}
         />

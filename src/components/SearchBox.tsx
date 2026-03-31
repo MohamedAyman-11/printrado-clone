@@ -28,7 +28,7 @@ const SearchBox = () => {
     });
   }, []);
   const filteredResults = useMemo(() => {
-    return fuse.search(inputValue).map((result) => result.item);
+    return fuse.search(inputValue.trim()).map((result) => result.item);
   }, [fuse, inputValue]);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -143,7 +143,7 @@ const SearchBox = () => {
         }}
       />
       {/* Render filtered results */}
-      {open && inputValue.length >= 3 && (
+      {open && inputValue.trim().length >= 3 && (
         <Box
           ref={boxRef}
           sx={{

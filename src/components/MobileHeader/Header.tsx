@@ -1,12 +1,7 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import { Badge, badgeClasses, IconButton, Stack, styled } from "@mui/material";
-import {
-  FavoriteBorderOutlined,
-  Menu,
-  PersonOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
+import { IconButton, Stack } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 import { useState } from "react";
 import LinksDrawer from "./Drawer";
 import SearchBox from "../SearchBox";

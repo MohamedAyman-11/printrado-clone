@@ -47,7 +47,7 @@ const SearchBoxEndIcons = ({
             />
           </IconButton>
         )}
-        {inputValue && (
+        {inputValue.trim() && (
           <IconButton
             onClick={onSearchHandler}
             sx={{

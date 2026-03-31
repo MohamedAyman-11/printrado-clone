@@ -6,6 +6,7 @@ import SearchBox from "../SearchBox";
 import { useState } from "react";
 import ShoppingCartDrawer from "../ShoppingCartDrawer";
 import UserIcons from "./UserIcons";
+import { Link } from "react-router-dom";
 
 const MainAppBar = () => {
   const [open, setOpen] = useState(false);
@@ -26,15 +27,17 @@ const MainAppBar = () => {
               alignItems={"center"}
               justifyContent={"space-between"}
             >
-              <Box
-                component={"img"}
-                src="/images/logo.webp"
-                sx={{
-                  maxWidth: "350px",
-                  width: "180px",
-                  height: "100px",
-                }}
-              />
+              <Link to={"/"} style={{ textDecoration: "none" }}>
+                <Box
+                  component={"img"}
+                  src="/images/logo.webp"
+                  sx={{
+                    maxWidth: "350px",
+                    width: "180px",
+                    height: "100px",
+                  }}
+                />
+              </Link>
               <SearchBox />
               <UserIcons toggleDrawer={toggleDrawer} />
             </Stack>

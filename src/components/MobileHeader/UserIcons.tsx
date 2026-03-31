@@ -6,6 +6,7 @@ import {
 import { Badge, badgeClasses, IconButton, Stack, styled } from "@mui/material";
 import { useAppSelector } from "../../app/hooks";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {
     min-width: initial;
@@ -86,4 +87,4 @@ const UserIcons = ({ toggleLShoppingDrawer }: IProps) => {
     </>
   );
 };
-export default UserIcons;
+export default memo(UserIcons);

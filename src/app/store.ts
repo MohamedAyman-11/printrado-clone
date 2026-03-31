@@ -15,7 +15,6 @@ const storage = {
   return Promise.resolve();
  },
 };
-// ...
 const wishlistPersistConfig = {
  key: 'wishList',
  storage,
