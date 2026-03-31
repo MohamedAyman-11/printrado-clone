@@ -33,7 +33,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
 
   return (
     <>
-      <Stack direction={"row"} alignItems={"center"} gap={"10px"}>
+      <Stack direction={"row"} alignItems={"center"} gap={"15px"}>
         <Link to={"/wishlist"} className="large-header-icon">
           <FavoriteBorderOutlined
             fontSize="medium"
@@ -53,7 +53,7 @@ const UserIcons = ({ toggleDrawer }: IProps) => {
         <Button
           onClick={toggleDrawer(true)}
           sx={{
-            padding: "12px 16px",
+            padding: "10px 15px",
             bgcolor: "#101010",
             color: "white",
             borderRadius: "30px",

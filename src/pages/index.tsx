@@ -14,6 +14,7 @@ import Technology from "./Technology";
 import Management from "./Management";
 import SelfHelp from "./SelfHelp";
 import WishList from "./WishList";
+import SearchResult from "./SearchResult";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,7 @@ export const router = createBrowserRouter(
       <Route path="self-help" element={<SelfHelp />} />
       <Route path="about-us" element={<About />} />
       <Route path="wishlist" element={<WishList />} />
+      <Route path="search" element={<SearchResult />} />
       {/* Products Details Page */}
       <Route path="/product/:slug" element={<ProductDetailsCard />} />
     </Route>,
