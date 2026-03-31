@@ -58,7 +58,7 @@ const ProductCard = ({ product }: IProps) => {
     <>
       <Box
         sx={{
-          height: "454px",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           borderRadius: "12px",
@@ -66,8 +66,22 @@ const ProductCard = ({ product }: IProps) => {
           boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
           overflow: "hidden",
           position: "relative",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
+            transform: "translateY(-5px) ",
+          },
+          "&:hover .btn-add-to-cart": {
+            opacity: 1,
+          },
           "&:hover .product-img": {
-            transform: "scale(1.04)",
+            // transform: "scale(1.04)",
+          },
+          "&:hover .box-content": {
+            transform: {
+              xs: "translateY(0px)",
+              lg: "translateY(-48px)",
+            },
           },
         }}
       >
@@ -220,7 +234,8 @@ const ProductCard = ({ product }: IProps) => {
           to={`/product/${product.slug}`}
           sx={{
             width: "100%",
-            height: "300px",
+            overflow: "hidden",
+            height: "275px",
           }}
         >
           <Box
@@ -233,19 +248,32 @@ const ProductCard = ({ product }: IProps) => {
             width={"100%"}
             height={"100%"}
             sx={{
-              transition: "all 0.3s ease",
+              width: "100%",
+              height: "100%",
+              transition: "0.3s",
             }}
           />
         </Box>
 
         {/* CONTENT */}
         <Box
+          className="box-content"
           sx={{
             p: 2,
-            flexGrow: 1,
             display: "flex",
-            justifyContent: "space-between",
             flexDirection: "column",
+            transition: "all 0.3s ease",
+            bgcolor: "#fff",
+            gap: "8px",
+            flexGrow: 1,
+            transform: {
+              xs: "translateY(0px)",
+              lg: "translateY(10px)",
+            },
+            marginBottom: {
+              xs: "0px",
+              lg: "-48px",
+            },
           }}
         >
           {/* Title */}
@@ -254,7 +282,6 @@ const ProductCard = ({ product }: IProps) => {
             component={Link}
             to={`/product/${product.slug}`}
             sx={{
-              mt: "2px",
               fontWeight: 700,
               textDecoration: "none",
               color: "#333",
@@ -262,7 +289,8 @@ const ProductCard = ({ product }: IProps) => {
               display: "-webkit-box",
               WebkitLineClamp: 2,
               WebkitBoxOrient: "vertical",
-              transition: "all 0.3s ease",
+              overflow: "hidden",
+              minHeight: "44px",
               "&:hover": {
                 color: "#777",
               },
@@ -273,6 +301,7 @@ const ProductCard = ({ product }: IProps) => {
           {/* PRICE */}
           <Stack
             mt={"10px"}
+            mb={"5px"}
             direction={"row"}
             alignItems={"center"}
             gap={"8px"}
@@ -310,6 +339,7 @@ const ProductCard = ({ product }: IProps) => {
             </Typography>
           </Stack>
           <Button
+            className="btn-add-to-cart"
             disabled={!product.inStock}
             onClick={onAddItemToCart}
             sx={{
@@ -317,11 +347,19 @@ const ProductCard = ({ product }: IProps) => {
               width: "100%",
               height: "40px",
               borderRadius: "90px",
+              opacity: {
+                xs: 1,
+                lg: 0,
+              },
               bgcolor: "primary.main",
               color: "#fff",
               overflow: "hidden",
               mt: "5px",
               transition: "all 0.3s ease",
+              transitionDelay: {
+                xs: "0s",
+                lg: "0.07s",
+              },
               "&:hover": {
                 bgcolor: "#d8832e",
               },

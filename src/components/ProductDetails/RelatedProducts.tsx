@@ -122,11 +122,7 @@ const RelatedProducts = ({ product }: IProps) => {
           }}
         >
           {relatedProducts.map((product) => (
-            <SwiperSlide
-              style={{
-                height: "454px",
-              }}
-            >
+            <SwiperSlide>
               <ProductCard product={product} key={product.slug} />
             </SwiperSlide>
           ))}

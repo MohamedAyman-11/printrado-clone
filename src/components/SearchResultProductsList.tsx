@@ -20,7 +20,7 @@ const SearchResultProductsList = () => {
     });
   }, []);
   const filteredResults = useMemo(() => {
-    return fuse.search(query).map((result) => result.item);
+    return fuse.search(query.trim()).map((result) => result.item);
   }, [fuse, query]);
   const currentItems = filteredResults.slice(startIndex, endIndex);
   return (
@@ -77,13 +77,14 @@ const SearchResultProductsList = () => {
                 severity="warning"
                 sx={{
                   color: "#fff",
+                  bgcolor: "primary.main",
                   fontSize: {
                     xs: "14px",
                     sm: "16px",
                     md: "18px",
                   },
                   py: 1.5,
-                  mt: 2,
+                  mt: 1,
                   borderRadius: "10px",
                   width: "100%",
                   display: "flex",
