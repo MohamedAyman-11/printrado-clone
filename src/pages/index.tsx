@@ -16,6 +16,7 @@ import SelfHelp from "./SelfHelp";
 import WishList from "./Wishlist";
 import SearchResult from "./SearchResult";
 import MyAccount from "./MyAccount";
+import Cart from "./Cart";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ export const router = createBrowserRouter(
       <Route path="wishlist" element={<WishList />} />
       <Route path="search" element={<SearchResult />} />
       <Route path="my-account" element={<MyAccount />} />
+      <Route path="/cart" element={<Cart />} />
       {/* Products Details Page */}
       <Route path="/product/:slug" element={<ProductDetailsCard />} />
     </Route>,

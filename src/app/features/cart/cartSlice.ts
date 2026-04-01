@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { IProduct } from '../../../interfaces'
-import { addItemToCartHandler, removeItemFromCartHandler } from '../../../utils'
+import { addItemToCartHandler, removeItemFromCartHandler, updateItemQuantityHandler } from '../../../utils'
 
 // Define a type for the slice state
 interface CartState {
@@ -22,10 +22,13 @@ const cartSlice = createSlice({
   removeItemFromCart: (state, actionPayload: PayloadAction<IProduct>) => {
    state.cartProducts = removeItemFromCartHandler(state.cartProducts, actionPayload.payload)
   },
+  updateItemQuantity: (state, actionPayload: PayloadAction<IProduct>) => {
+   state.cartProducts = updateItemQuantityHandler(state.cartProducts, actionPayload.payload)
+  }
  },
 })
 
-export const { addItemToCart, removeItemFromCart } = cartSlice.actions
+export const { addItemToCart, removeItemFromCart, updateItemQuantity } = cartSlice.actions
 
 
 export default cartSlice.reducer

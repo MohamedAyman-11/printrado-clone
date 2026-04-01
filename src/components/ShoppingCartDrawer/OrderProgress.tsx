@@ -15,10 +15,16 @@ const OrderProgress = () => {
   return (
     <>
       <Box sx={{ py: "15px" }} px={"15px"}>
-        <Typography sx={{ mb: 1, color: "#777", fontSize: "15px" }}>
+        <Typography sx={{ mb: 1.25, color: "#777", fontSize: "15px" }}>
           {remaining ? (
             <Typography component={"span"}>
-              Add <span className="remaining-price">{remaining} EGP </span>
+              Add{" "}
+              <span
+                className="remaining-price"
+                style={{ display: "inline-block", margin: "0 3px" }}
+              >
+                {remaining} EGP{" "}
+              </span>
               to cart and get free shipping!
             </Typography>
           ) : (
@@ -30,7 +36,7 @@ const OrderProgress = () => {
           variant="determinate"
           value={progress}
           sx={{
-            height: 10,
+            height: 8,
             borderRadius: 5,
             backgroundColor: "#eee",
             "& .MuiLinearProgress-bar": {
@@ -38,6 +44,7 @@ const OrderProgress = () => {
                 "linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent)",
               backgroundSize: "15px 15px",
               backgroundColor: "#ed9c4b",
+              borderRadius: "35px",
             },
           }}
         />

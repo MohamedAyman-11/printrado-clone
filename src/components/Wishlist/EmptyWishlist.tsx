@@ -22,6 +22,7 @@ const EmptyWishlist = () => {
           }}
         />
         <Typography
+          component={"h6"}
           sx={{
             color: "#242424",
             fontSize: {

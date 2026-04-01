@@ -121,6 +121,18 @@ a.active {
 
 }
 
+@media (max-width:767px) {
+
+ .qty-btn.qty-box,
+ .qty-inp.qty-box {
+  height: 32px;
+ }
+
+ .qty-inp.qty-box {
+  font-size: 13px;
+ }
+}
+
 
 .qty-btn:first-child {
  border-start-start-radius: 35px;

@@ -41,13 +41,15 @@ const JoinUs = () => {
               }}
             />
             <Box
+              alignItems="center"
+              gap={2}
+              my={"20px"}
+              width={"100%"}
               sx={{
                 display: {
                   xs: "flex",
                   md: "none",
                 },
-                gap: 2,
-                alignItems: "center",
               }}
             >
               <Box flex={1} height="1px" bgcolor="#0000001b" />
