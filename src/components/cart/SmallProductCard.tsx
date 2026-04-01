@@ -1,9 +1,9 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import type { IProduct } from "../interfaces";
+import type { IProduct } from "../../interfaces";
 import { Link } from "react-router-dom";
 import { Close } from "@mui/icons-material";
-import { removeItemFromCart } from "../app/features/cart/cartSlice";
-import { useAppDispatch } from "../app/store";
+import { removeItemFromCart } from "../../app/features/cart/cartSlice";
+import { useAppDispatch } from "../../app/store";
 import QuantityBox from "./QuantityBox";
 
 interface IProps {

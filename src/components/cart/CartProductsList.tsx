@@ -1,8 +1,8 @@
 import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { Helmet } from "react-helmet-async";
-import OrderProgress from "../components/ShoppingCartDrawer/OrderProgress";
+import OrderProgress from "../ShoppingCartDrawer/OrderProgress";
 import ProductDisplay from "./ProductDisplay";
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import CartEmpty from "./CartEmpty";
 import CartInfo from "./CartInfo";
 import ProductDisplaySmall from "./ProductDisplaySmall";

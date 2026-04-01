@@ -10,13 +10,13 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import { Close } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import QuantityBox from "./QuantityBox";
-import { useAppDispatch } from "../app/store";
-import { removeItemFromCart } from "../app/features/cart/cartSlice";
-import type { IProduct } from "../interfaces";
+import { useAppDispatch } from "../../app/store";
+import { removeItemFromCart } from "../../app/features/cart/cartSlice";
+import type { IProduct } from "../../interfaces";
 
 const ProductDisplay = () => {
   const dispatch = useAppDispatch();

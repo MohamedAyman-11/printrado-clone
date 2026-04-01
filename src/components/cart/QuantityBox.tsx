@@ -1,8 +1,8 @@
 import { Stack } from "@mui/material";
 import { useEffect, useState } from "react";
-import type { IProduct } from "../interfaces";
-import { updateItemQuantity } from "../app/features/cart/cartSlice";
-import { useAppDispatch } from "../app/store";
+import type { IProduct } from "../../interfaces";
+import { updateItemQuantity } from "../../app/features/cart/cartSlice";
+import { useAppDispatch } from "../../app/store";
 interface IProps {
   product: IProduct;
 }

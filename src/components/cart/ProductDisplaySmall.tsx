@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import SmallProductCard from "./SmallProductCard";
 
 const ProductDisplaySmall = () => {
