@@ -1,4 +1,4 @@
-import SoftwareProductsList from "../components/SoftwarePageProductsList";
+import SoftwareProductsList from "../components/Software/SoftwarePageProductsList";
 
 const Software = () => {
   return (

@@ -53,7 +53,7 @@ const RelatedProducts = ({ product }: IProps) => {
               width: "fit-content",
               minWidth: "fit-content",
               "&:hover": {
-                bgcolor: "#d8832e",
+                bgcolor: "primary.light",
               },
               "&:disabled": {
                 bgcolor: "#999",
@@ -73,7 +73,7 @@ const RelatedProducts = ({ product }: IProps) => {
               width: "fit-content",
               minWidth: "fit-content",
               "&:hover": {
-                bgcolor: "#d8832e",
+                bgcolor: "primary.light",
               },
               "&:disabled": {
                 bgcolor: "#999",

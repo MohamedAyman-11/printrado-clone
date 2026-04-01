@@ -74,9 +74,6 @@ const ProductCard = ({ product }: IProps) => {
           "&:hover .btn-add-to-cart": {
             opacity: 1,
           },
-          "&:hover .product-img": {
-            // transform: "scale(1.04)",
-          },
           "&:hover .box-content": {
             transform: {
               xs: "translateY(0px)",
@@ -105,7 +102,7 @@ const ProductCard = ({ product }: IProps) => {
                 variant="body2"
                 fontWeight={700}
                 sx={{
-                  bgcolor: "primary.main",
+                  bgcolor: "text.primary",
                   color: "white",
                   borderRadius: "30px",
                   py: 0.5,
@@ -259,7 +256,7 @@ const ProductCard = ({ product }: IProps) => {
         <Box
           className="box-content"
           sx={{
-            p: 2,
+            p: "15px",
             display: "flex",
             flexDirection: "column",
             transition: "all 0.3s ease",
@@ -291,6 +288,7 @@ const ProductCard = ({ product }: IProps) => {
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
               minHeight: "44px",
+              transition: "all 0.3s ease",
               "&:hover": {
                 color: "#777",
               },
@@ -319,7 +317,7 @@ const ProductCard = ({ product }: IProps) => {
             ) : (
               <Typography
                 variant="body2"
-                color="primary.main"
+                color="text.primary"
                 fontWeight={"bold"}
               >
                 {Math.trunc(product.price)} EGP
@@ -327,7 +325,7 @@ const ProductCard = ({ product }: IProps) => {
             )}
             <Typography
               variant="body2"
-              color="primary.main"
+              color="text.primary"
               fontWeight={"bold"}
             >
               {product.hasDiscount && product.discountRate
@@ -361,7 +359,7 @@ const ProductCard = ({ product }: IProps) => {
                 lg: "0.07s",
               },
               "&:hover": {
-                bgcolor: "#d8832e",
+                bgcolor: "primary.light",
               },
               "&:disabled": {
                 pointerEvents: "auto",

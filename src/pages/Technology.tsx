@@ -1,4 +1,4 @@
-import TechnologyProductsList from "../components/TechnologyPageProductsList";
+import TechnologyProductsList from "../components/Technology/TechnologyPageProductsList";
 
 const Technology = () => {
   return (

@@ -1,12 +1,11 @@
 import { Box } from "@mui/material";
-import InfoBar from "../components/LargeHeader/InfoBar";
-import MainAppBar from "../components/LargeHeader/MainAppBar";
-import Navbar from "../components/LargeHeader/Navbar";
-import MobileInfoBar from "../components/MobileHeader/Header";
+import InfoBar from "../components/Layout/LargeHeader/InfoBar";
+import MainAppBar from "../components/Layout/LargeHeader/MainAppBar";
+import Navbar from "../components/Layout/LargeHeader/Navbar";
+import MobileInfoBar from "../components/Layout/MobileHeader/Header";
 import { Outlet } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import Footer from "../components/Footer";
-
+import { Toaster } from "react-hot-toast";
+import Footer from "../components/Layout/Footer";
 const RootLayout = () => {
   return (
     <>
@@ -35,7 +34,7 @@ const RootLayout = () => {
         </Box>
         <Outlet />
         <Footer />
-        <ToastContainer />
+        <Toaster position="top-center" reverseOrder={true} />
       </main>
     </>
   );

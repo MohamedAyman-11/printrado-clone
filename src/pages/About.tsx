@@ -1,8 +1,12 @@
 import { Box, Typography } from "@mui/material";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <>
+      <Helmet>
+        <title>About us | Printrado</title>
+      </Helmet>
       <Box
         component={"section"}
         sx={{

@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 * {
  padding: 0;
  margin: 0;
  box-sizing: border-box;
- font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+ font-family: "Urbanist", "Work Sans", "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+:root {
+ --btn-primary-color: #f59a57;
+ --btn-primary-color-hover: #df8c4f;
+ --text-primary-color: #ed9c4b;
 }
 
 /* ** Global Styles ** */
+
+
 input[type="search"]::-webkit-search-cancel-button {
  display: none;
  appearance: none;
@@ -61,7 +73,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 a.active {
- color: #ed9c4b
+ color: var(--text-primary-color);
 }
 
 
@@ -124,7 +136,7 @@ a.active {
 
 
 .qty-btn:hover {
- background-color: #ed9c4b;
+ background-color: var(--btn-primary-color-hover);
  color: white;
 }
 
@@ -194,11 +206,11 @@ a.active {
 }
 
 .accordion-header .MuiAccordionSummary-content .MuiTypography-root:hover {
- color: #ed9c4b;
+ color: var(--text-primary-color);
 }
 
 .accordion-header .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
- color: #ed9c4b;
+ color: var(--text-primary-color);
 }
 
 /* ** Swiper js Styles ** */
@@ -212,13 +224,13 @@ a.active {
 }
 
 .swiper-pagination-bullet-active {
- background-color: #ed9c4b !important;
+ background-color: var(--btn-primary-color) !important;
 }
 
 /* ** Shopping Drawer ** */
 .go-to-shop {
  color: #fff !important;
- background-color: #ed9c4b;
+ background-color: var(--btn-primary-color) !important;
  text-decoration: none;
  border-radius: 35px;
  padding: 12px 20px;
@@ -237,7 +249,7 @@ a.active {
 /* ** Drawer Footer ** */
 .remaining-price {
  font-weight: bold;
- color: #ed9c4b;
+ color: var(--text-primary-color);
 }
 
 .go-to-cart {
@@ -260,48 +272,12 @@ a.active {
  background-color: #e4e4e4;
 }
 
-/* user icons */
-.large-header-icon {
- width: 46px;
- height: 46px;
- display: flex;
- align-items: center;
- justify-content: center;
- border-radius: 50%;
- color: #101010b3;
- background-color: #1010100d !important;
- transition: all 0.3s ease;
- padding: 9px;
-}
-
-.large-header-icon:hover svg {
- transform: scale(1.1);
- color: #999;
-
-}
-
-.small-header-icon {
- width: 46px;
- height: 46px;
- display: flex;
- align-items: center;
- justify-content: center;
- border-radius: 50%;
- color: #101010b3;
- transition: all 0.3s ease;
- padding: 9px;
-}
-
-.small-header-icon:hover svg {
- transform: scale(1.1);
- color: #999;
-}
 
 .wishlist-badge {
  position: absolute;
  top: 7px;
  right: 2px;
- background-color: #ed9c4b;
+ background-color: var(--text-primary-color);
  color: #fff;
  width: 17px;
  height: 17px;

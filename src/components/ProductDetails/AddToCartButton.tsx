@@ -39,7 +39,7 @@ const AddToCartButton = ({ inCart, onAddItemToCart, disabled }: IProps) => {
           overflow: "hidden",
           transition: "all 0.3s ease",
           "&:hover": {
-            bgcolor: "#d8832e",
+            bgcolor: "primary.light",
           },
           "&:disabled": {
             pointerEvents: "auto",

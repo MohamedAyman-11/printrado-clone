@@ -38,12 +38,12 @@ const ProductQuantity = ({ inputValue, setInputValue }: IProps) => {
             }
           }}
           onChange={(e) => {
-            let value = e.target.value;
+            const value = e.target.value;
             if (value === "") {
               setInputValue("");
               return;
             }
-            let num = Number(value);
+            const num = Number(value);
             if (num < 1) {
               setInputValue("1");
               return;

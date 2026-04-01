@@ -1,4 +1,4 @@
-import SelfHelpProductsList from "../components/SelfHelpPageProductsList";
+import SelfHelpProductsList from "../components/Self_Help/SelfHelpPageProductsList";
 
 const SelfHelp = () => {
   return (

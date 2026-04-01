@@ -23,6 +23,7 @@ import ProductDetailsInfo from "./ProductDetailsInfo";
 import ProductQuantity from "./ProductQuantity";
 import AddToCartButton from "./AddToCartButton";
 import AddToWishListButton from "./AddToWishListButton";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetailsCard = () => {
   /* ** States ** */
@@ -39,6 +40,7 @@ const ProductDetailsCard = () => {
       behavior: "smooth",
     });
   }, [pathname]);
+
   /* ** Checks ** */
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   /* ** Get Data From Store ** */
@@ -69,18 +71,24 @@ const ProductDetailsCard = () => {
         quantity: Number(inputValue),
       }),
     );
-  }, [selectedProduct, inputValue]);
+  }, [dispatch, selectedProduct, inputValue]);
   const onAddItemToWishList = useCallback(() => {
     dispatch(addItemToWishList(selectedProduct));
-  }, [selectedProduct]);
-
+  }, [dispatch, selectedProduct]);
   return (
     <>
+      <Helmet>
+        <title>
+          {selectedProduct?.title
+            ? selectedProduct.title + " | Printrado"
+            : "Loading..."}
+        </title>
+      </Helmet>
       <Box
         component="section"
         sx={{
           mt: "3px",
-          py: 8,
+          py: 5,
           backgroundImage: "url(/images/background.webp) ",
           backgroundColor: "#fff",
         }}

@@ -28,11 +28,11 @@ const CustomPagination = ({ count, setPage, page }: IProps) => {
               margin: "2px",
             },
             "& .Mui-selected": {
-              bgcolor: `${theme.palette.primary.main} !important`,
+              bgcolor: `${theme.palette.text.primary} !important`,
               color: "#fff !important",
             },
             "& .Mui-selected:hover": {
-              bgcolor: `${theme.palette.primary.main} !important`,
+              bgcolor: `${theme.palette.text.primary} !important`,
               color: "#fff !important",
             },
             "& .MuiTouchRipple-root": {

@@ -1,4 +1,4 @@
-import SearchResultProductsList from "../components/SearchResultProductsList";
+import SearchResultProductsList from "../components/SearchBox/SearchResultProductsList";
 
 const SearchResult = () => {
   return <SearchResultProductsList />;

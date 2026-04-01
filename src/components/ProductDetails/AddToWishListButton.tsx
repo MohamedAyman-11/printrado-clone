@@ -77,7 +77,7 @@ const AddToWishListButton = ({ inWishList, onAddItemToWishList }: IProps) => {
               overlap="circular"
               sx={{
                 "& .MuiBadge-badge": {
-                  backgroundColor: "primary.main",
+                  backgroundColor: "text.primary",
                   color: "white",
                   fontSize: "12px",
                   fontWeight: "bold",

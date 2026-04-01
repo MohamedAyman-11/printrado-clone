@@ -1,4 +1,4 @@
-import ManagementProductsList from "../components/ManagementPageProductsList";
+import ManagementProductsList from "../components/Management/ManagementPageProductsList";
 
 const Management = () => {
   return (

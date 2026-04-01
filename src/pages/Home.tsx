@@ -1,4 +1,4 @@
-import HomeProductsList from "../components/HomePageProductsList";
+import HomeProductsList from "../components/Home/HomePageProductsList";
 
 const Home = () => {
   return (

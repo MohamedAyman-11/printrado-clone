@@ -1,4 +1,4 @@
-import SecurityProductsList from "../components/SecurityPageProductsList";
+import SecurityProductsList from "../components/Security/SecurityPageProductsList";
 
 const Security = () => {
   return <SecurityProductsList />;

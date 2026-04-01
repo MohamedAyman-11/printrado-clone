@@ -55,7 +55,7 @@ const ProductDetailsInfo = ({ product }: IProps) => {
           </Typography>
         ) : (
           <Typography
-            color="primary.main"
+            color="text.primary"
             fontWeight={"bold"}
             sx={{
               fontSize: {
@@ -68,7 +68,7 @@ const ProductDetailsInfo = ({ product }: IProps) => {
           </Typography>
         )}
         <Typography
-          color="primary.main"
+          color="text.primary"
           fontWeight={"bold"}
           sx={{
             fontSize: {
@@ -98,7 +98,7 @@ const ProductDetailsInfo = ({ product }: IProps) => {
           gap={"2.5px"}
           sx={{ fontWeight: 600, color: "#333" }}
         >
-          <Check sx={{ color: "primary.main", fontSize: "20px" }} />
+          <Check sx={{ color: "text.primary", fontSize: "20px" }} />
           In stock
         </Typography>
       ) : (

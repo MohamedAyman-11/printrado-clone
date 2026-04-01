@@ -1,4 +1,4 @@
-import { Bounce, toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import type { IProduct } from "../interfaces";
 
 // Add Items To Cart Handler
@@ -8,9 +8,10 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
    if (isAlreadyExist) {
       toast.success("✔ Product quantity updated", {
          position: "top-center",
-         autoClose: 1500,
-         theme: "light",
-         transition: Bounce,
+         style: {
+            fontWeight: 500,
+            color: "#333 !important",
+         }
       });
 
       return cartProducts.map((item) =>
@@ -20,9 +21,10 @@ export const addItemToCartHandler = (cartProducts: IProduct[], product: IProduct
 
    toast.success("✔ Product added at cart", {
       position: "top-center",
-      autoClose: 1500,
-      theme: "light",
-      transition: Bounce,
+      style: {
+         fontWeight: 500,
+         color: "#333 !important",
+      }
    });
 
    return [{
@@ -41,10 +43,10 @@ export const removeItemFromCartHandler = (cartProducts: IProduct[], product: IPr
 
    toast.success("✔ Product removed successfully", {
       position: "top-center",
-      autoClose: 1500,
-      theme: "light",
-      transition: Bounce,
-
+      style: {
+         fontWeight: 500,
+         color: "#333 !important",
+      }
    })
    return cartProducts.filter((item) => item.slug !== product.slug);
 
