@@ -1,6 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import ContactForm from "./ContactForm";
+import AskedQuestions from "./AskedQuestions";
 
 const ContactUs = () => {
   return (
@@ -30,6 +31,7 @@ const ContactUs = () => {
             }}
           >
             <ContactForm />
+            <AskedQuestions />
           </Stack>
         </Box>
       </Box>

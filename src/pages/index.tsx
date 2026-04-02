@@ -18,6 +18,7 @@ import SearchResult from "./SearchResult";
 import MyAccount from "./MyAccount";
 import Cart from "./Cart";
 import Contact from "./Contact";
+import NotFound from "./NotFound";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,13 +31,15 @@ export const router = createBrowserRouter(
       <Route path="management" element={<Management />} />
       <Route path="self-help" element={<SelfHelp />} />
       <Route path="about-us" element={<About />} />
-      <Route path="/contact-us" element={<Contact />} />
+      <Route path="contact-us" element={<Contact />} />
       <Route path="search" element={<SearchResult />} />
       <Route path="my-account" element={<MyAccount />} />
-      <Route path="/cart" element={<Cart />} />
+      <Route path="cart" element={<Cart />} />
       <Route path="wishlist" element={<WishList />} />
       {/* Products Details Page */}
-      <Route path="/product/:slug" element={<ProductDetailsCard />} />
+      <Route path="product/:slug" element={<ProductDetailsCard />} />
+      {/* Page Not Found  */}
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 );

@@ -8,7 +8,10 @@ const ContactFormHeader = () => {
           <Typography
             component={"h4"}
             sx={{
-              fontSize: "36px",
+              fontSize: {
+                xs: "24px",
+                lg: "36px",
+              },
               color: "#242424",
               fontWeight: 700,
             }}

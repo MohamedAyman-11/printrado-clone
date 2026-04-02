@@ -14,8 +14,8 @@ const Form = () => {
     mode: "onChange",
     resolver: zodResolver(contactSchema),
   });
-  const onSubmit: SubmitHandler<TContact> = (data: TContact) =>
-    console.log(data);
+  const onSubmit: SubmitHandler<TContact> = () => {};
+
   return (
     <>
       <Box component={"div"} className="form-wrapper" my={"25px"}>
@@ -53,7 +53,7 @@ const Form = () => {
               sx={{
                 width: {
                   xs: "100%",
-                  md: "60%",
+                  xl: "70%",
                 },
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline ": {
                   border: "1px solid #00000040",
@@ -93,7 +93,7 @@ const Form = () => {
                     border: "1px solid #0000001a",
                     width: {
                       xs: "100%",
-                      md: "60%",
+                      xl: "70%",
                     },
                   },
                 },
@@ -139,7 +139,7 @@ const Form = () => {
               sx={{
                 width: {
                   xs: "100%",
-                  md: "60%",
+                  xl: "70%",
                 },
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline ": {
                   border: "1px solid #00000040",
@@ -179,7 +179,7 @@ const Form = () => {
                     border: "1px solid #0000001a",
                     width: {
                       xs: "100%",
-                      md: "60%",
+                      xl: "70%",
                     },
                   },
                 },
@@ -225,7 +225,7 @@ const Form = () => {
               sx={{
                 width: {
                   xs: "100%",
-                  md: "60%",
+                  xl: "70%",
                 },
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline ": {
                   border: "1px solid #00000040",
@@ -265,7 +265,7 @@ const Form = () => {
                     border: "1px solid #0000001a",
                     width: {
                       xs: "100%",
-                      md: "60%",
+                      xl: "70%",
                     },
                   },
                 },
