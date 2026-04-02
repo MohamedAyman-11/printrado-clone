@@ -17,7 +17,7 @@ const CustomPagination = ({ count, setPage, page }: IProps) => {
         <Pagination
           count={count}
           page={page}
-          onChange={(event, value) => setPage(value)}
+          onChange={(_, value) => setPage(value)}
           shape="rounded"
           sx={(theme) => ({
             transition: "all 0.3s ease",
