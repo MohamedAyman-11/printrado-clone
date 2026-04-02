@@ -24,6 +24,7 @@ import ProductQuantity from "./ProductQuantity";
 import AddToCartButton from "./AddToCartButton";
 import AddToWishListButton from "./AddToWishListButton";
 import { Helmet } from "react-helmet-async";
+import NotFound from "../../pages/NotFound";
 
 const ProductDetailsCard = () => {
   /* ** States ** */
@@ -75,6 +76,9 @@ const ProductDetailsCard = () => {
   const onAddItemToWishList = useCallback(() => {
     dispatch(addItemToWishList(selectedProduct));
   }, [dispatch, selectedProduct]);
+  if (!selectedProduct) {
+    return <NotFound />;
+  }
   return (
     <>
       <Helmet>
