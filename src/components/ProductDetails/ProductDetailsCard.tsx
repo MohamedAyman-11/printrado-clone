@@ -56,14 +56,16 @@ const ProductDetailsCard = () => {
     )[0];
   }, [selectedProductSlug]);
   /* ** Checks ** */
-  const inCart = useMemo(
-    () => cartProducts.find((item) => item.slug === selectedProduct.slug),
-    [cartProducts, selectedProduct],
-  );
-  const inWishListProducts = useMemo(
-    () => wishListProducts.find((item) => item.slug === selectedProduct.slug),
-    [wishListProducts, selectedProduct],
-  );
+  const inCart = useMemo(() => {
+    if (!selectedProduct) return false;
+
+    return cartProducts.find((item) => item.slug === selectedProduct.slug);
+  }, [cartProducts, selectedProduct]);
+
+  const inWishListProducts = useMemo(() => {
+    if (!selectedProduct) return false;
+    return wishListProducts.find((item) => item.slug === selectedProduct.slug);
+  }, [wishListProducts, selectedProduct]);
 
   const onAddItemToCart = useCallback(() => {
     dispatch(
