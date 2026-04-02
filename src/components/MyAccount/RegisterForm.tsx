@@ -16,8 +16,7 @@ const RegisterForm = () => {
     mode: "onChange",
   });
 
-  const onSubmit: SubmitHandler<TRegister> = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit: SubmitHandler<TRegister> = () => {};
   return (
     <>
       <Box

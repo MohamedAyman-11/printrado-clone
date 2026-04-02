@@ -29,9 +29,7 @@ const LoginForm = () => {
     mode: "onChange",
   });
   const handleClickShowPassword = () => setShowPassword((prev) => !prev);
-  const onSubmit: SubmitHandler<TLogin> = (data: TLogin) => {
-    console.log(data);
-  };
+  const onSubmit: SubmitHandler<TLogin> = () => {};
   return (
     <>
       <Box
