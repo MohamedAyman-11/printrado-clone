@@ -11,3 +11,12 @@ export const loginSchema = z.object({
  }, { error: "Enter a valid email or username" }),
  user_password: z.string().min(6, "Password must be 6 characters at least")
 })
+export const contactSchema = z.object({
+ name: z.string().min(1, "Please enter your name"),
+ email: z.string().min(1, "Email address is required").refine(value => {
+  const isEmail = z.email().safeParse(value).success;
+  return isEmail;
+ }, { error: "Please enter a valid email address" }),
+ phone: z.string().min(1, "Phone number is required"),
+ message: z.string().min(50, "Message must be 50 character at least").max(320, "Message must be 320 character at least")
+})

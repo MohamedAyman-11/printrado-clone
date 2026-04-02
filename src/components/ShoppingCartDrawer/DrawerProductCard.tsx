@@ -68,60 +68,63 @@ const DrawerProductCard = ({
             gap={"20px"}
             alignItems={"flex-start"}
             width={"100%"}
+            justifyContent={"space-between"}
           >
-            <ListItemAvatar>
-              <Box
-                component={"img"}
-                alt={product.title}
-                src={product.img}
+            <Stack direction="row" gap="20px" flexGrow={1}>
+              <ListItemAvatar>
+                <Box
+                  component={"img"}
+                  alt={product.title}
+                  src={product.img}
+                  sx={{
+                    minWidth: "65px",
+                    maxWidth: "65px",
+                  }}
+                />
+              </ListItemAvatar>
+              <ListItemText
                 sx={{
-                  minWidth: "65px",
-                  maxWidth: "65px",
-                }}
-              />
-            </ListItemAvatar>
-            <ListItemText
-              sx={{
-                "& .MuiTypography-root.MuiTypography-body1  ": {
-                  color: "#333",
-                  fontWeight: 700,
-                  display: "block",
-                  transition: "all 0.3s ease",
-                  fontSize: "15px",
-                  flexGrow: 1,
-                },
-              }}
-            >
-              {product.title}
-              <Stack
-                display={"flex"}
-                direction={"row"}
-                alignItems={"center"}
-                mt={"5px"}
-              >
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#bbb",
-                    fontSize: "13px",
+                  "& .MuiTypography-root.MuiTypography-body1  ": {
+                    color: "#333",
                     fontWeight: 700,
-                  }}
+                    display: "block",
+                    transition: "all 0.3s ease",
+                    fontSize: "15px",
+                    flexGrow: 1,
+                  },
+                }}
+              >
+                {product.title}
+                <Stack
+                  display={"flex"}
+                  direction={"row"}
+                  alignItems={"center"}
+                  mt={"5px"}
                 >
-                  {product.quantity} x
-                </Typography>
-                <Typography
-                  variant="h6"
-                  color="text.primary"
-                  fontWeight={700}
-                  sx={{
-                    fontSize: "16px",
-                    ml: "5px",
-                  }}
-                >
-                  {product.price}
-                </Typography>
-              </Stack>
-            </ListItemText>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#bbb",
+                      fontSize: "13px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {product.quantity} x
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.primary"
+                    fontWeight={700}
+                    sx={{
+                      fontSize: "16px",
+                      ml: "5px",
+                    }}
+                  >
+                    {product.price}
+                  </Typography>
+                </Stack>
+              </ListItemText>
+            </Stack>
             <IconButton
               size="small"
               onClick={(e) => {

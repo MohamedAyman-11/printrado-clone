@@ -45,7 +45,9 @@ const ShoppingCartDrawerHeader = ({ toggleDrawer }: IProps) => {
           }}
           startIcon={<Clear />}
         >
-          <Typography fontWeight={700}>Close</Typography>
+          <Typography fontWeight={700} lineHeight={"initial"}>
+            Close
+          </Typography>
         </Button>
       </Stack>
     </>

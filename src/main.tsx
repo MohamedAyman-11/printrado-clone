@@ -9,7 +9,7 @@ import { persistor, store } from "./app/store.ts";
 import { HelmetProvider } from "react-helmet-async";
 const theme = createTheme({
   typography: {
-    fontFamily: "Urbanist, Work Sans, Roboto, Helvetica, Arial, sans-serif",
+    fontFamily: "Urbanist, Roboto, Helvetica, Arial, sans-serif",
   },
   palette: {
     primary: {

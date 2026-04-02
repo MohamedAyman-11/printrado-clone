@@ -1,4 +1,4 @@
-import JoinUs from "../components/myAccount/JoinUs";
+import JoinUs from "../components/MyAccount/JoinUs";
 
 const MyAccount = () => {
   return (

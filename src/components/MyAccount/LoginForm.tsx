@@ -70,7 +70,7 @@ const LoginForm = () => {
               <Typography
                 component={"span"}
                 color="error.light"
-                fontSize={"18px"}
+                fontSize={"20px"}
                 fontWeight={500}
               >
                 *
@@ -135,7 +135,7 @@ const LoginForm = () => {
               <Typography
                 component={"span"}
                 color="error.light"
-                fontSize={"18px"}
+                fontSize={"20px"}
                 fontWeight={500}
               >
                 *

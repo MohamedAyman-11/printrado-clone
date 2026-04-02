@@ -31,6 +31,8 @@ const LinksDrawer = ({ open, toggleDrawer }: IProps) => {
                   fontSize: "14px",
                   background: "transparent",
                   transition: "all 0.3s ease",
+                  color: "#333",
+                  fontWeight: 600,
                   "&:hover": {
                     backgroundColor: "transparent",
                     color: "text.primary",

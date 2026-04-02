@@ -57,7 +57,7 @@ const RegisterForm = () => {
               <Typography
                 component={"span"}
                 color="error.light"
-                fontSize={"18px"}
+                fontSize={"20px"}
                 fontWeight={500}
               >
                 *
