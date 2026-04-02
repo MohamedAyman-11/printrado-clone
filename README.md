@@ -151,8 +151,8 @@ printrado-clone/
 | | Details |
 |---|---|
 | **Name** | Mohamed Ayman |
-| **GitHub** | [@YOUR_GITHUB_USERNAME](https://github.com/MohamedAyman-11) |
-| **LinkedIn** | [Your LinkedIn](https://www.linkedin.com/in/mohamedayman-dev/) |
+| **GitHub** | [MohamedAyman-11](https://github.com/MohamedAyman-11) |
+| **LinkedIn** | [Mohamed Ayman](https://www.linkedin.com/in/mohamedayman-dev/) |
 | **Email** | master.mohamed.ayman@gmail.com |
 
 ---
