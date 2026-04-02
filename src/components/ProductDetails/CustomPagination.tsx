@@ -27,6 +27,10 @@ const CustomPagination = ({ count, setPage, page }: IProps) => {
               fontWeight: 700,
               margin: "2px",
             },
+            "& .MuiPaginationItem-root ": {
+              color: "#242424",
+              fontWeight: 700,
+            },
             "& .Mui-selected": {
               bgcolor: `${theme.palette.text.primary} !important`,
               color: "#fff !important",

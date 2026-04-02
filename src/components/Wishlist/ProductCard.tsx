@@ -153,7 +153,10 @@ const ProductCard = ({ product }: IProps) => {
             sx={{
               width: "100%",
               overflow: "hidden",
-              height: "100%",
+              height: {
+                xs: "240px",
+                sm: "270px",
+              },
             }}
           >
             <Box
@@ -166,7 +169,7 @@ const ProductCard = ({ product }: IProps) => {
               width={"100%"}
               sx={{
                 width: "100%",
-                maxHeight: "367px",
+                height: "100%",
                 transition: "all 0.3s ease",
               }}
             />

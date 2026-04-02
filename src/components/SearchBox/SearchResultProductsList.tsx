@@ -54,7 +54,7 @@ const SearchResultProductsList = () => {
           </Box>
         </Box>
       ) : (
-        <Box height={"50vh"}>
+        <Box minHeight={"50vh"}>
           <Box className="container">
             <Box
               display={"flex"}
@@ -67,8 +67,14 @@ const SearchResultProductsList = () => {
                 component={"img"}
                 src="/images/no_items.svg"
                 sx={{
-                  width: "350px",
-                  height: "350px",
+                  width: {
+                    xs: "250px",
+                    sm: "350px",
+                  },
+                  height: {
+                    xs: "250px",
+                    sm: "350px",
+                  },
                   mx: "auto",
                 }}
               />
@@ -83,8 +89,12 @@ const SearchResultProductsList = () => {
                     sm: "16px",
                     md: "18px",
                   },
-                  py: 1.5,
+                  py: {
+                    xs: 1,
+                    sm: 1.5,
+                  },
                   mt: 1,
+                  mb: 2,
                   borderRadius: "10px",
                   width: "100%",
                   display: "flex",
@@ -92,7 +102,12 @@ const SearchResultProductsList = () => {
                 }}
               >
                 No products were found matching your selection. Please try again
-                with different keywords.
+                with different keywords{" "}
+                {query && (
+                  <>
+                    for <strong>"{query}"</strong>
+                  </>
+                )}
               </Alert>
             </Box>
           </Box>

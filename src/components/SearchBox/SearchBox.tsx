@@ -11,13 +11,20 @@ import { TextField, InputAdornment, Box, Typography } from "@mui/material";
 import Fuse from "fuse.js";
 import { Search } from "@mui/icons-material";
 import { HomeData } from "../../data/homePageData";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import SearchBoxEndIcons from "./SearchBoxEndIcons";
 import SearchResultCard from "./SearchResultCard";
 
 const SearchBox = () => {
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+
+  const [inputValue, setInputValue] = useState(query);
+
+  useEffect(() => {
+    setInputValue(query);
+  }, [query]);
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState("");
   const [open, setOpen] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
   const inpRef = useRef<HTMLInputElement>(null);

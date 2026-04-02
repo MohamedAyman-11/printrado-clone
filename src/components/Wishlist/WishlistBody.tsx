@@ -11,9 +11,16 @@ const WishlistBody = () => {
     <>
       {wishlistItems.length ? (
         <Box p={"15px"}>
-          <Grid container columnSpacing={"20px"} rowSpacing={"10px"}>
+          <Grid
+            container
+            columnSpacing={{
+              xs: "10px",
+              md: "20px",
+            }}
+            rowSpacing={"10px"}
+          >
             {wishlistItems.map((product) => (
-              <Grid size={{ xs: 6, md: 4, lg: 3 }} key={product.slug}>
+              <Grid size={{ xs: 6, md: 4, lg: 3, xl: 2.4 }} key={product.slug}>
                 <ProductCard product={product} />
               </Grid>
             ))}
