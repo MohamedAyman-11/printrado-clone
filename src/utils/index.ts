@@ -60,7 +60,7 @@ export const updateItemQuantityHandler = (cartProducts: IProduct[], product: IPr
 export const addItemToWishListHandler = (wishListProducts: IProduct[], product: IProduct,) => {
   const isAlreadyExist = wishListProducts.find((item) => item.slug === product.slug);
   if (isAlreadyExist) {
-    toast.error("Product removed from wishlist 💔", {
+    toast.success("Product removed from wishlist 💔", {
       position: "top-center",
       style: {
         fontWeight: 600,
